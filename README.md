@@ -3,6 +3,8 @@
 ---
 This is my second milestone project on the Full Stack Developer course by Code Institute. The aim is to create a responsive mobile first appraoch dashboard, which contains several dynamic charts, to visualise various dimensiions of a chosen dataset.
 
+I chose to use a dataset based on global shark attacks as this is something that I find interesting. This is purely a front-end project so no manipulation of the data has taken place on the back-end. This is purely a visualisation of data that is already in the file.
+
 
 ## UX
 ---
