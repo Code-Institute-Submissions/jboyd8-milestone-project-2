@@ -29,7 +29,9 @@ I chose to use a dataset based on global shark attacks as this is something that
 
 ## Technologies/Support Used
 ---
-
+Below is a list of technolgies I used to build my dahsboard.
+* HTML - HTML5 provided the structure of my website. I tried to use semantic elements where possible to ensure the best structure.
+* CSS was used to style my page.
 
 
 
