@@ -1,7 +1,7 @@
 # Milestone Project 1
 ## Description
 ---
-
+This is my second milestone project on the Full Stack Developer course by Code Institute. The aim is to create a responsive mobile first appraoch dashboard, which contains several dynamic charts, to visualise various dimensiions of a chosen dataset.
 
 
 ## UX
