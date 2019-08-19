@@ -8,6 +8,9 @@
 ---
 
 ### User Stories
+* I want to be able to view the number of Shark Attacks by country
+* I want to be able to view the number of Shark Attacks by Year
+* I want to be able to filter by state for the Shark Attacks in Australia and the USA
 
 ### Wireframes
 
