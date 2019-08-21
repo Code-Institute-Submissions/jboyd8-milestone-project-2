@@ -1,7 +1,10 @@
+
+//Call queue so data only renders once it is ready.
 queue()
     .defer(d3.csv, "assets/data/data.csv")
     .await(makeGraphs);
 
+//One function where all the charts are called and the crossfilter variable is created.
 function makeGraphs(error, data) {
     var ndx = crossfilter(data);
 
@@ -19,7 +22,7 @@ function showAttacksByYear(ndx) {
     var group = dim.group();
 
     dc.barChart('#chart-one')
-        .width(1200)
+        .width(1000)
         .height(300)
         .margins({top: 10, right: 50, bottom: 30, left: 50})
         .dimension(dim)
@@ -36,7 +39,7 @@ function showAttacksByCountry(ndx) {
     var group = dim.group();
 
     dc.barChart('#chart-two')
-        .width(1500)
+        .width(1000)
         .height(300)
         .margins({top: 10, right: 50, bottom: 30, left: 50})
         .dimension(dim)
