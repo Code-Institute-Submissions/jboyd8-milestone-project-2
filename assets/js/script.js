@@ -10,4 +10,22 @@ d3.csv("assets/data/data.csv").then(function(data) {
     
     var ndx = crossfilter(data);
 
+    var yearDim = ndx.dimension(dc.pluck('Year'));
+    var yearGroup = yearDim.group().reduceCount();
+
+    attacksByYear
+        .width(300)
+        .height(1000)
+        .dimension(yearDim)
+        .group(yearGroup)
+        .x(d3.scale.ordinal().domain(yearDim))
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("Year")
+        .yAxisLabel("Count")
+        .brushOn(false)
+
+
+
+    dc.renderAll();
+
   });
