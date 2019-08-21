@@ -3,3 +3,13 @@ footer {
     margin: 0;
     position: relative;
 }
+
+#chart-one .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-45deg);
+}
+
+#chart-two .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-90deg);
+}
