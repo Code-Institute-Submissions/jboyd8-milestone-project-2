@@ -12,23 +12,22 @@ var attacksByCountry = dc.barChart('chart-two')
 //Convert CSV file into readable format
 function makeGraphs(data) {
     
-    var ndx = crossfilter(data);
+    console.log(data)
+    // var ndx = crossfilter(data);
 
-    var yearDim = ndx.dimension(dc.pluck('Year'));
-    var yearGroup = yearDim.group().reduceCount();
+    // var yearDim = ndx.dimension(dc.pluck('Year'));
+    // var yearGroup = yearDim.group();
 
-    attacksByYear
-        .width(300)
-        .height(1000)
-        .dimension(yearDim)
-        .group(yearGroup)
-        .x(d3.scale.ordinal().domain(yearDim))
-        .xUnits(dc.units.ordinal)
-        .xAxisLabel("Year")
-        .yAxisLabel("Count")
-        .brushOn(false)
+    // attacksByYear
+    //     .width(300)
+    //     .height(1000)
+    //     .dimension(yearDim)
+    //     .group(yearGroup)
+    //     .x(d3.scale.linear().domain(yearDim))
+    //     .xUnits(dc.units.linear)
+    //     .xAxisLabel("Year")
+    //     .yAxisLabel("Count")
+    //     .brushOn(false)
 
-
-
-    dc.renderAll();
+    // dc.renderAll();
 }
