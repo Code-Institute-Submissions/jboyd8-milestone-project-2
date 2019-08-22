@@ -81,3 +81,7 @@ function showAttacksByOutcome(ndx) {
         .dimension(dim)
         .group(group)
 }
+
+$(document).ready( function () {
+    $('#table_id').DataTable();
+} );
