@@ -1,6 +1,11 @@
+header {
+    padding: 2rem;
+}
+
 footer {
     background-color: #999895;
     margin: 0;
+    padding: 1rem;
     position: relative;
 }
 
