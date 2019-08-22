@@ -32,6 +32,7 @@ function showAttacksByYear(ndx) {
         .xUnits(dc.units.ordinal)
         .xAxisLabel('Year')
         .yAxis().ticks(20)
+        .brushOn(true)
 }
 
 function showAttacksByCountry(ndx) {
@@ -49,6 +50,7 @@ function showAttacksByCountry(ndx) {
         .xUnits(dc.units.ordinal)
         .xAxisLabel('Country')
         .yAxis().ticks(20)
+        .brushOn(true)
 }
 
 function showAttacksByReason(ndx) {
