@@ -11,6 +11,9 @@ header {
 
 h3 {
     background-color: #5085a5;
+    border-radius: 5px;
+    margin: 2rem;
+    min-height: 3rem;
 }
 
 footer {
