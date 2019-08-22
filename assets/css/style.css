@@ -25,6 +25,8 @@ footer {
     position: relative;
 }
 
+/* Rotate labels at bottom of bar charts */
+
 #chart-one .x.axis text {
     text-anchor: end !important;
     transform: rotate(-45deg);
