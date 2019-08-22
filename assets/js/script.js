@@ -22,7 +22,7 @@ function showAttacksByYear(ndx) {
     var group = dim.group();
 
     dc.barChart('#chart-one')
-        .width(1000)
+        .width(500)
         .height(300)
         .margins({top: 10, right: 50, bottom: 30, left: 50})
         .dimension(dim)
@@ -32,7 +32,7 @@ function showAttacksByYear(ndx) {
         .xUnits(dc.units.ordinal)
         .xAxisLabel('Year')
         .yAxis().ticks(20)
-        .brushOn(true)
+        //.brushOn(true)
 }
 
 function showAttacksByCountry(ndx) {
@@ -40,7 +40,7 @@ function showAttacksByCountry(ndx) {
     var group = dim.group();
 
     dc.barChart('#chart-two')
-        .width(1000)
+        .width(500)
         .height(300)
         .margins({top: 10, right: 50, bottom: 30, left: 50})
         .dimension(dim)
@@ -50,7 +50,7 @@ function showAttacksByCountry(ndx) {
         .xUnits(dc.units.ordinal)
         .xAxisLabel('Country')
         .yAxis().ticks(20)
-        .brushOn(true)
+        //.brushOn(true)
 }
 
 function showAttacksByReason(ndx) {
