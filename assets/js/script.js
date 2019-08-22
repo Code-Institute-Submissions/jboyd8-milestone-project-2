@@ -59,7 +59,7 @@ function showAttacksByReason(ndx) {
 
     dc.pieChart('#chart-three')
         .height(300)
-        .radius(300)
+        .radius(150)
         .dimension(dim)
         .group(group)
 }
@@ -70,7 +70,7 @@ function showAttacksByArea(ndx) {
 
     dc.pieChart('#chart-four')
         .height(300)
-        .radius(300)
+        .radius(150)
         .dimension(dim)
         .group(group)
 }
@@ -81,7 +81,7 @@ function showAttacksByOutcome(ndx) {
 
     dc.pieChart('#chart-five')
         .height(300)
-        .radius(300)
+        .radius(150)
         .dimension(dim)
         .group(group)
 }
