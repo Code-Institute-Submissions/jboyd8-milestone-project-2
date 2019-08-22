@@ -24,7 +24,7 @@ function showAttacksByYear(ndx) {
     dc.barChart('#chart-one')
         .width(500)
         .height(300)
-        .margins({top: 10, right: 10, bottom: 30, left: 10})
+        .margins({top: 10, right: 10, bottom: 30, left: 30})
         .dimension(dim)
         .group(group)
         .transitionDuration(500)
