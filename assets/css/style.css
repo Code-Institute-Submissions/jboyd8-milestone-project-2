@@ -9,11 +9,8 @@ header {
     margin-bottom: 1rem;
 }
 
-.card {
-    background-color: #31708E;
-    margin-top: 1rem;
-    margin-left: 4rem;
-    margin-right: 2rem;
+h3 {
+    background-color: #5085a5;
 }
 
 footer {
