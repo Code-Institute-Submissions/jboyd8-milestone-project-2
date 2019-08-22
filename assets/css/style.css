@@ -1,11 +1,23 @@
+body {
+    background-color: #5085a5;
+}
+
 header {
     padding: 2rem;
+    background-color: #31708E;
+    color: #f7f9fb;
+    margin-bottom: 1rem;
+}
+
+.card {
+    background-color: #8fc1e3;
 }
 
 footer {
-    background-color: #999895;
     margin: 0;
     padding: 1rem;
+    background-color: #687864;
+    color: #f7f9fb;
     position: relative;
 }
 
