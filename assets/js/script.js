@@ -30,9 +30,7 @@ function showAttacksByYear(ndx) {
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .xAxisLabel('Year')
         .yAxis().ticks(20)
-        //.brushOn(true)
 }
 
 function showAttacksByCountry(ndx) {
@@ -48,9 +46,7 @@ function showAttacksByCountry(ndx) {
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .xAxisLabel('Country')
         .yAxis().ticks(20)
-        //.brushOn(true)
 }
 
 function showAttacksByReason(ndx) {
