@@ -30,6 +30,7 @@ section {
 
 h3 {
     background-color: #5085a5;
+    color: #f7f9fb;
     border-radius: 5px;
     margin: 3rem;
     min-height: 3rem;
@@ -60,6 +61,16 @@ footer {
 #btt-button {
     float: right;
     margin: 1rem;
+    background-color: #f7f9fb;
+    color: #687864;
+}
+
+#btt-button a {
+    color: #687864;
+}
+
+#btt-button a:hover {
+    text-decoration: none;
 }
 
 /* Rotate labels at bottom of bar charts */
