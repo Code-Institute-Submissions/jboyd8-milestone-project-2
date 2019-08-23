@@ -38,7 +38,7 @@ function showAttacksByCountry(ndx) {
     var group = dim.group();
 
     dc.barChart('#chart-two')
-        .width(1000)
+        .width(700)
         .height(300)
         .margins({top: 10, right: 10, bottom: 30, left: 100})
         .dimension(dim)
