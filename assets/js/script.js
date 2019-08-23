@@ -91,4 +91,8 @@ function showAttacksByOutcome(ndx) {
 
 $(document).ready( function () {
     $('#table_id').DataTable();
+
+    $('.instruction-button').on('click', function() {
+        $('.jumbotron').slideToggle('slow');
+    })
 } );
