@@ -95,4 +95,10 @@ $(document).ready( function () {
     $('.instruction-button').on('click', function() {
         $('.jumbotron').slideToggle('slow')
     })
+
+    //functionality for the reset button. Reset all filters and re-render charts
+    $('#reset-button').on('click', function() {
+        dc.filterAll();
+        dc.renderAll();
+    })
 });
