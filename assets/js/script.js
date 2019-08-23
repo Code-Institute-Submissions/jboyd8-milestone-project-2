@@ -55,9 +55,11 @@ function showAttacksByReason(ndx) {
 
     dc.pieChart('#chart-three')
         .height(300)
+        .width(700)
         .radius(150)
         .dimension(dim)
         .group(group)
+        .legend(dc.legend().x(0).y(0));
 }
 
 function showAttacksByArea(ndx) {
@@ -66,9 +68,11 @@ function showAttacksByArea(ndx) {
 
     dc.pieChart('#chart-four')
         .height(300)
+        .width(700)
         .radius(150)
         .dimension(dim)
         .group(group)
+        .legend(dc.legend().x(0).y(0));
 }
 
 function showAttacksByOutcome(ndx) {
@@ -77,9 +81,11 @@ function showAttacksByOutcome(ndx) {
 
     dc.pieChart('#chart-five')
         .height(300)
+        .width(700)
         .radius(150)
         .dimension(dim)
         .group(group)
+        .legend(dc.legend().x(0).y(0));
 }
 
 $(document).ready( function () {
