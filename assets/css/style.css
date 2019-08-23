@@ -11,11 +11,17 @@ header {
 
 section {
     margin: 5rem;
+    padding-right: 5rem;
 }
 
 .instruction-button {
     margin-bottom: 2rem;
     height: 4rem;
+    background-color: #31708E;
+}
+
+.instruction-button:hover {
+    background-color: #31708E;
 }
 
 .jumbotron {
