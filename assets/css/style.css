@@ -51,6 +51,11 @@ footer {
     position: relative;
 }
 
+#footer-writing {
+    float: left;
+    line-height: 5rem;
+}
+
 #reset-button,
 #btt-button {
     float: right;
