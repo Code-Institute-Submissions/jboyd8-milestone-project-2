@@ -26,6 +26,8 @@ section {
 
 .jumbotron {
     display: none;
+    background-color: #5085a5;
+    color: #f7f9fb;
 }
 
 h3 {
@@ -35,6 +37,7 @@ h3 {
     border-radius: 5px;
     margin: 3rem;
     min-height: 3rem;
+    padding: 1rem;
 }
 
 
