@@ -22,9 +22,9 @@ function showAttacksByYear(ndx) {
     var group = dim.group();
 
     dc.barChart('#chart-one')
-        .width(500)
+        .width(700)
         .height(300)
-        .margins({top: 10, right: 10, bottom: 30, left: 30})
+        .margins({top: 10, right: 10, bottom: 30, left: 70})
         .dimension(dim)
         .group(group)
         .transitionDuration(500)
@@ -38,14 +38,15 @@ function showAttacksByCountry(ndx) {
     var group = dim.group();
 
     dc.barChart('#chart-two')
-        .width(500)
+        .width(1000)
         .height(300)
-        .margins({top: 10, right: 10, bottom: 30, left: 30})
+        .margins({top: 10, right: 10, bottom: 30, left: 100})
         .dimension(dim)
         .group(group)
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
+        .legend(dc.legend().x(10).y(10).itemHeight(15).gap(0))
         .yAxis().ticks(20)
 }
 
