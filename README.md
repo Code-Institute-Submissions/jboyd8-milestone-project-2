@@ -36,7 +36,15 @@ dataset was not complete.
 Below is a list of technolgies I used to build my dahsboard.
 * HTML - HTML5 provided the structure of my website. I tried to use semantic elements where possible to ensure the best structure.
 * CSS - Used to style my page.
-
+* [Bootstrap]() - Used primarily for the grid system. I find this a really good way to position my elements where I want them.
+* [VSCode]() - This is my text editor. It has a built in terminal so I could do everything I needed to from one environment.
+* [Git]() - Git was used for version control. Allowing me to create backups whenever significant changes were made to my code.
+* [GitHub]() - This is where my repository is held externally. I will aslo use GitHub pages to deploy my website.
+* [Javascript/Jquery]() - 
+* [d3.js]()
+* [crossfilter.js]()
+* [dc.js]()
+* [Google Fonts]() - Used to import specific fonts I wanted to use on my website.
 
 
 ## Testing
