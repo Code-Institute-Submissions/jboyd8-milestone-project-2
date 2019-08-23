@@ -1,10 +1,11 @@
-# Milestone Project 1
+# Milestone Project 2
 ## Description
 ---
 This is my second milestone project on the Full Stack Developer course by Code Institute. The aim is to create a responsive mobile first appraoch dashboard, which contains several dynamic charts, to visualise various dimensiions of a chosen dataset.
 
 I chose to use a dataset based on global shark attacks as this is something that I find interesting. This is purely a front-end project so no manipulation of the data has taken place on the back-end. This is purely a visualisation of data that is already in the file.
 
+[Dashboard Website](https://jboyd8.github.io/milestone-project-2/)
 
 ## UX
 ---
@@ -21,9 +22,12 @@ I chose to use a dataset based on global shark attacks as this is something that
 ## Features
 ---
 #### Current Features
-
+The current features of this dashboard include multiple interactive charts. By clicking on any value in any of the charts, all other charts
+will filter accordingly.
 
 #### Future Features
+Future features will depends on the data available. I would like to add a chart to show attacks by species. The data in the species column of this
+dataset was not complete.
 
 
 
@@ -31,7 +35,7 @@ I chose to use a dataset based on global shark attacks as this is something that
 ---
 Below is a list of technolgies I used to build my dahsboard.
 * HTML - HTML5 provided the structure of my website. I tried to use semantic elements where possible to ensure the best structure.
-* CSS was used to style my page.
+* CSS - Used to style my page.
 
 
 
@@ -63,11 +67,11 @@ To deploy the website to GitHub pages, I followed the below steps:
 * Selected 'Settings' from the menu bar.
 * From the GitHub pages section, I chose 'master branch' from the dropdown menu.
 * Once selected, the page refreshed and a link was displayed in the GitHub pages section to my wesbite.
-* [Website Link](https://jboyd8.github.io/milestone-project-1/)
+* [Website Link](https://jboyd8.github.io/milestone-project-2/)
 
 ### To run this project locally
 
-* Follow this link to the [GitHub Repositiry](https://github.com/jboyd8/milestone-project-1)
+* Follow this link to the [GitHub Repositiry](https://github.com/jboyd8/milestone-project-2)
 * Click on the 'Clone or Download' button.
 * Copy the URL provided.
 * Open a bash terminal, move to your desired directory.
