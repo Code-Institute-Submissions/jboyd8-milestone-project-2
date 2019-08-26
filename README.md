@@ -105,3 +105,5 @@ To deploy the website to GitHub pages, I followed the below steps:
 
 
 #### Copied Code
+I used the basis of this code on Stack Overflowa and adapted it to work with my own code. This allowed me to create objects containing the counts of each occurence of a piece of data in a particular column. 
+Which then allowed me to calculate the percentages for each chart. ![](https://stackoverflow.com/questions/38296484/count-text-fields-from-csv-dataset-in-d3-js)
