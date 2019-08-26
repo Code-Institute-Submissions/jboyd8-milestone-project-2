@@ -18,6 +18,8 @@ By utilising crossfilter.js and dc.js, I ensured the user could have some contro
 
 I included a button in the footer to enable a user to go straight up to the top of the page rather than scrolling back up to enhance user experience. I also added a button in the footer to allow all charts to be reset for the same reason.
 
+I have added the full chart at the bottom of the page so that users have the option to look through the whole dataset should the need arise.
+
 I have shared my wireframes below, however, the final site looks quite different. As I was developing the site, it became apparent that there was a better way for the data to be visualized, as well as allowing the data to be responsive on all devices, which was at the forefront of my design process. I initially wanted to go with a really simple design that just plainly showed the charts. However, upon development, I saw ways in which I can improve 
 
 ### User Stories
