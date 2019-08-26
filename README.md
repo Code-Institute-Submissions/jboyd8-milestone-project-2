@@ -57,7 +57,7 @@ Below is a list of technolgies I used to build my dahsboard.
 * [Javascript/Jquery]() - 
 * [d3.js]()
 * [crossfilter.js]()
-* [dc.js]()
+* [dc.js](https://dc-js.github.io/dc.js/)
 * [Google Fonts]() - Used to import specific fonts I wanted to use on my website.
 
 
