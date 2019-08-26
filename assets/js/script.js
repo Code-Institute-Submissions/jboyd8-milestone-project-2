@@ -55,7 +55,7 @@ function showAttacksByYear(ndx) {
     var group = dim.group();
 
     dc.barChart('#chart-one')
-        .width(700)
+        .width(500)
         .height(300)
         .margins({top: 10, right: 10, bottom: 30, left: 70})
         .dimension(dim)
@@ -71,7 +71,7 @@ function showAttacksByCountry(ndx) {
     var group = dim.group();
 
     dc.barChart('#chart-two')
-        .width(700)
+        .width(500)
         .height(300)
         .margins({top: 10, right: 10, bottom: 30, left: 100})
         .dimension(dim)
@@ -89,7 +89,7 @@ function showAttacksByReason(ndx) {
 
     dc.pieChart('#chart-three')
         .height(300)
-        .width(700)
+        .width(500)
         .radius(150)
         .dimension(dim)
         .group(group)
@@ -102,7 +102,7 @@ function showAttacksByArea(ndx) {
 
     dc.pieChart('#chart-four')
         .height(300)
-        .width(700)
+        .width(500)
         .radius(150)
         .dimension(dim)
         .group(group)
@@ -115,7 +115,7 @@ function showAttacksByOutcome(ndx) {
 
     dc.pieChart('#chart-five')
         .height(300)
-        .width(700)
+        .width(500)
         .radius(150)
         .dimension(dim)
         .group(group)
