@@ -217,7 +217,6 @@ function showAttacksByCountry(ndx) {
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        //.legend(dc.legend().x(0).y(0).itemHeight(15).gap(0))
         .yAxis().ticks(20)
 };
 
