@@ -4,7 +4,7 @@ queue()
     .defer(d3.csv, "assets/data/data.csv")
     .await(makeGraphs);
 
-//One function where all the charts are called and the crossfilter variable is created.
+//One function where all the charts are called and the crossfilter variable is created as well as some percentage caluculations.
 function makeGraphs(error, data) {
     var ndx = crossfilter(data);
 
@@ -19,10 +19,11 @@ function makeGraphs(error, data) {
 
     dc.renderAll();
 
+    //Create an object to store count totals of each year
     var countObj = {};
 
     data.forEach(function(d) {
-        var year = d.value;
+        var year = d.Year;
         if(countObj[year] === undefined) {
             countObj[year] = 0;
         } else {
@@ -31,13 +32,56 @@ function makeGraphs(error, data) {
     });
 
     data.forEach(function(d) {
-        var year = d.value;
-        d.count = countObj[year];
-    })
+        var year = d.Year;
+        d.Year = countObj[year];
+    });
 
-    console.log(countObj)
+    //Create variables to stores the percentage values in.
+    var year2000 = (countObj[2000] / 2159) * 100;
+    var year2001 = (countObj[2001] / 2159) * 100;
+    var year2002 = (countObj[2002] / 2159) * 100;
+    var year2003 = (countObj[2003] / 2159) * 100;
+    var year2004 = (countObj[2004] / 2159) * 100;
+    var year2005 = (countObj[2005] / 2159) * 100;
+    var year2006 = (countObj[2006] / 2159) * 100;
+    var year2007 = (countObj[2007] / 2159) * 100;
+    var year2008 = (countObj[2008] / 2159) * 100;
+    var year2009 = (countObj[2009] / 2159) * 100;
+    var year2010 = (countObj[2010] / 2159) * 100;
+    var year2011 = (countObj[2011] / 2159) * 100;
+    var year2012 = (countObj[2012] / 2159) * 100;
+    var year2013 = (countObj[2013] / 2159) * 100;
+    var year2014 = (countObj[2014] / 2159) * 100;
+    var year2015 = (countObj[2015] / 2159) * 100;
+    var year2016 = (countObj[2016] / 2159) * 100;
+    var year2017 = (countObj[2017] / 2159) * 100;
+    var year2018 = (countObj[2018] / 2159) * 100;
+
+
+    //append a list to index.html with percentage values shown.
+    $('#year-paragraph').append(' \
+        <ul style="list-style: none;"> \
+            <li>2000 = '+ year2000.toFixed(2) +'%<li> \
+            <li>2001 = '+ year2001.toFixed(2) +'%<li> \
+            <li>2002 = '+ year2002.toFixed(2) +'%<li> \
+            <li>2003 = '+ year2003.toFixed(2) +'%<li> \
+            <li>2004 = '+ year2004.toFixed(2) +'%<li> \
+            <li>2005 = '+ year2005.toFixed(2) +'%<li> \
+            <li>2006 = '+ year2006.toFixed(2) +'%<li> \
+            <li>2007 = '+ year2007.toFixed(2) +'%<li> \
+            <li>2008 = '+ year2008.toFixed(2) +'%<li> \
+            <li>2009 = '+ year2009.toFixed(2) +'%<li> \
+            <li>2010 = '+ year2010.toFixed(2) +'%<li> \
+            <li>2011 = '+ year2011.toFixed(2) +'%<li> \
+            <li>2012 = '+ year2012.toFixed(2) +'%<li> \
+            <li>2013 = '+ year2013.toFixed(2) +'%<li> \
+            <li>2014 = '+ year2014.toFixed(2) +'%<li> \
+            <li>2015 = '+ year2015.toFixed(2) +'%<li> \
+            <li>2016 = '+ year2016.toFixed(2) +'%<li> \
+            <li>2017 = '+ year2017.toFixed(2) +'%<li> \
+            <li>2018 = '+ year2018.toFixed(2) +'%<li> \
+        </ul>');
 };
-
 
 function filterAttacksByYear(ndx) {
     var dim = ndx.dimension(dc.pluck('Year'));
