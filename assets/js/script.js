@@ -18,7 +18,26 @@ function makeGraphs(error, data) {
     showAttacksByOutcome(ndx);
 
     dc.renderAll();
+
+    var countObj = {};
+
+    data.forEach(function(d) {
+        var year = d.value;
+        if(countObj[year] === undefined) {
+            countObj[year] = 0;
+        } else {
+            countObj[year] = countObj[year] + 1;
+        }
+    });
+
+    data.forEach(function(d) {
+        var year = d.value;
+        d.count = countObj[year];
+    })
+
+    console.log(countObj)
 };
+
 
 function filterAttacksByYear(ndx) {
     var dim = ndx.dimension(dc.pluck('Year'));
@@ -63,6 +82,7 @@ function showAttacksByYear(ndx) {
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
+        .ordinalColors(['red', 'green', 'blue'])
         .yAxis().ticks(20)
 };
 
