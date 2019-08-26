@@ -26,7 +26,7 @@ I have shared my wireframes below, however, the final site looks quite different
 
 ### Wireframes
 ####Desktop
-(images/wireframes/desktop.png)
+![](images/wireframes/desktop.png)
 
 
 ## Features
