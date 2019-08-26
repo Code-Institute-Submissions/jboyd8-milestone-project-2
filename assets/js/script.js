@@ -123,6 +123,7 @@ function showAttacksByOutcome(ndx) {
 }
 
 $(document).ready( function () {
+
     /*$('#table').DataTable( {
        data: (d3.csv, "assets/data/data.csv"),
        columns: [
