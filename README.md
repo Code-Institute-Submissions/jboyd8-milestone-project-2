@@ -9,14 +9,24 @@ I chose to use a dataset based on global shark attacks as this is something that
 
 ## UX
 ---
+I chose a very specific color theme for the dahboard based ont he topic involved. As it was based upon Shark Attack data I wanted to use nature colors which is how I decided upon blues and greens. I used an off white color for the font
+for a bit of contrast. I felt tried to keep an element of repetition throughout the web pahe to provide the best user experience possible. This allows a user to learn how the website works quickly. In addition to this, I also provided some instructions on the site so that the user knows exactly how it works. As this was a dashboard project, I wanted to create a one page site. I feel as though this is the best way to show case the data at hand.
+
+In terms of the font, I chose Cabin bcecause I felt it still looked very professional whilst still being sleek. I felt the need for it to still look professional on a dashboard was very important.
+
+By utilising crossfilter.js and dc.js, I ensured the user could have some control over the data they wanted to see. On initial load up, all the data presented is unfiltered, and with the inclusin of some dropdown bars, and the clickable charts, users have the ability to filter information how they see fit.
+
+I have shared my wireframes below, however, the final site looks quite different. As I was developing the site, it became apparent that there was a better way for the data to be visualized, as well as allowing the data to be responsive on all devices, which was at the forefront of my design process. I initially wanted to go with a really simple design that just plainly showed the charts. However, upon development, I saw ways in which I can improve 
 
 ### User Stories
 * I want to be able to view the number of Shark Attacks by country (top ten)
 * I want to be able to view the number of Shark Attacks by Year
-* I want to be able to filter by state for the Shark Attacks in Australia and the USA
+* I want to be able to filter by state for the Shark Attacks.
+* I want to be able to filter data.
 
 ### Wireframes
-
+####Desktop
+(images/wireframes/desktop.png)
 
 
 ## Features
