@@ -79,7 +79,7 @@ function showAttacksByCountry(ndx) {
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(10).y(10).itemHeight(15).gap(0))
+        //.legend(dc.legend().x(0).y(0).itemHeight(15).gap(0))
         .yAxis().ticks(20)
 }
 
@@ -123,7 +123,25 @@ function showAttacksByOutcome(ndx) {
 }
 
 $(document).ready( function () {
-   // $('#table').DataTable();
+    $('#table').DataTable( {
+       data: (d3.csv, "assets/data/data.csv"),
+       columns: [
+           {title: "Case Number"},
+           {title: "Date"},
+           {title: "Year"},
+           {title: "Type"},
+           {title: "Country"},
+           {title: "Area"},
+           {title: "Location"},
+           {title: "Activity"},
+           {title: "Sex"},
+           {title: "Age"},
+           {title: "Injury"},
+           {title: "Fatal(Y/N"},
+           {title: "Time"},
+           {title: "Species"}
+       ]
+   });
 
     $('.instruction-button').on('click', function() {
         $('.jumbotron').slideToggle('slow')
