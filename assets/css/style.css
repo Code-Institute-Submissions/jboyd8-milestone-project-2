@@ -25,6 +25,10 @@ section {
     background-color: #31708E;
 }
 
+.note-text {
+    color: black;
+}
+
 .jumbotron,
 .percentages {
     display: none;
