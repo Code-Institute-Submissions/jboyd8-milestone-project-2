@@ -84,6 +84,46 @@ function makeGraphs(error, data) {
             <li>2018 = '+ year2018.toFixed(2) +'%<li> \
         </ul>');
 
+    //Create an object to store counts of types
+    var typeObj = {};
+
+    data.forEach(function(d) {
+        var type = d.Type;
+        if(typeObj[type] === undefined) {
+            typeObj[type] = 0;
+        } else {
+            typeObj[type] = typeObj[type] + 1;
+        }
+    });
+
+    data.forEach(function(d) {
+        var type = d.Type;
+        d.Type = typeObj[type];
+    });
+
+    //Create variables to store %sof types
+    var typeInvalid = (typeObj['Invalid'] / 2159) * 100;
+    var typeProvoked = (typeObj['Provoked'] / 2159) * 100;
+    var typeQuestionable = (typeObj['Questionable'] / 2159) * 100;
+    var typeSD = (typeObj['Sea Disaster'] / 2159) * 100;
+    var typeUI = (typeObj['Under investigation'] / 2159) * 100;
+    var typeUnknown = (typeObj['Unknown'] / 2159) * 100;
+    var typeUnprovoked = (typeObj['Unprovoked'] / 2159) * 100;
+    var typeWatercraft = (typeObj['Watercraft'] / 2159) * 100;
+
+    //append %s to html
+    $('#type-paragraph').append(' \
+        <ul style="list-style: none;"> \
+            <li>Invalid = '+ typeInvalid.toFixed(2) +'%<li> \
+            <li>Provoked = '+ typeProvoked.toFixed(2) +'%<li> \
+            <li>Questionable = '+ typeQuestionable.toFixed(2) +'%<li> \
+            <li>Sea Disaster = '+ typeSD.toFixed(2) +'%<li> \
+            <li>Under Investigation = '+ typeUI.toFixed(2) +'%<li> \
+            <li>Unknown = '+ typeUnknown.toFixed(2) +'%<li> \
+            <li>Unprovoked = '+ typeUnprovoked.toFixed(2) +'%<li> \
+            <li>Watercraft = '+ typeWatercraft.toFixed(2) +'%<li> \
+        </ul>');
+
 
     //Create an object to store counts of outcomes
     var fatalObj = {};
