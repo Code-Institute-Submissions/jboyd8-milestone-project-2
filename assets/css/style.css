@@ -58,13 +58,25 @@ footer {
 }
 
 #footer-writing {
-    float: left;
-    line-height: 5rem;
+    display: block;
+}
+
+@media (min-width: 576px){
+    #footer-writing {
+        float: left;
+        line-height: 5rem;
+    }
+}
+
+@media (min-width: 576px) {
+    #reset-button,
+    #btt-button {
+        float: right;
+    }
 }
 
 #reset-button,
 #btt-button {
-    float: right;
     margin: 1rem;
     background-color: #f7f9fb;
     color: #687864;
