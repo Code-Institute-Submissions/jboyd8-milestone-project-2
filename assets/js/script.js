@@ -201,7 +201,6 @@ function showAttacksByYear(ndx) {
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .ordinalColors(['red', 'green', 'blue'])
         .yAxis().ticks(20)
 };
 
