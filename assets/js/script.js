@@ -83,6 +83,39 @@ function makeGraphs(error, data) {
             <li>2017 = '+ year2017.toFixed(2) +'%<li> \
             <li>2018 = '+ year2018.toFixed(2) +'%<li> \
         </ul>');
+
+
+    //Create an object to store counts of outcomes
+    var fatalObj = {};
+
+    data.forEach(function(d) {
+        var outcome = d.Fatal;
+        if(fatalObj[outcome] === undefined) {
+            fatalObj[outcome] = 0;
+        } else {
+            fatalObj[outcome] = fatalObj[outcome] + 1;
+        }
+    });
+
+    data.forEach(function(d) {
+        var outcome = d.Fatal;
+        d.Fatal = fatalObj[outcome];
+    });
+
+    //variables to calculate % of each outcome
+    var outcomeY = (fatalObj['Y'] / 2159) * 100;
+    var outcomeN = (fatalObj['N'] / 2159) * 100;
+    var outcomeUnknown = (fatalObj['Unknown'] / 2159) * 100;
+
+    //append %s to html
+    $('#fatal-paragraph').append(' \
+        <ul style="list-style: none;"> \
+            <li>Y = '+ outcomeY.toFixed(2) +'%<li> \
+            <li>N = '+ outcomeN.toFixed(2) +'%<li> \
+            <li>Unknown = '+ outcomeUnknown.toFixed(2) +'%<li> \
+        </ul>');
+
+
 };
 
 function filterAttacksByYear(ndx) {
@@ -106,7 +139,7 @@ function filterAttacksByType(ndx) {
 };
 
 function filterAttacksByOutcome(ndx) {
-    var dim = ndx.dimension(dc.pluck('Fatal (Y/N)'));
+    var dim = ndx.dimension(dc.pluck('Fatal'));
     var group = dim.group();
 
     dc.selectMenu('#fatal-filter')
@@ -176,7 +209,7 @@ function showAttacksByArea(ndx) {
 };
 
 function showAttacksByOutcome(ndx) {
-    var dim = ndx.dimension(dc.pluck('Fatal (Y/N)'));
+    var dim = ndx.dimension(dc.pluck('Fatal'));
     var group = dim.group();
 
     dc.pieChart('#chart-five')
