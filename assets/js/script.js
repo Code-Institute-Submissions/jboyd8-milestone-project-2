@@ -8,6 +8,9 @@ queue()
 function makeGraphs(error, data) {
     var ndx = crossfilter(data);
 
+    filterAttacksByYear(ndx);
+    filterAttacksByType(ndx);
+    filterAttacksByOutcome(ndx);
     showAttacksByYear(ndx);
     showAttacksByCountry(ndx);
     showAttacksByReason(ndx);
@@ -15,6 +18,36 @@ function makeGraphs(error, data) {
     showAttacksByOutcome(ndx);
 
     dc.renderAll();
+}
+
+function filterAttacksByYear(ndx) {
+    var dim = ndx.dimension(dc.pluck('Year'));
+    var group = dim.group();
+
+    dc.selectMenu('#year-filter')
+        .dimension(dim)
+        .group(group)
+        .promptText('Show all years')
+}
+
+function filterAttacksByType(ndx) {
+    var dim = ndx.dimension(dc.pluck('Type'));
+    var group = dim.group();
+
+    dc.selectMenu('#type-filter')
+        .dimension(dim)
+        .group(group)
+        .promptText('Show all types')
+}
+
+function filterAttacksByOutcome(ndx) {
+    var dim = ndx.dimension(dc.pluck('Fatal (Y/N)'));
+    var group = dim.group();
+
+    dc.selectMenu('#fatal-filter')
+        .dimension(dim)
+        .group(group)
+        .promptText('Show all outcomes')
 }
 
 function showAttacksByYear(ndx) {
