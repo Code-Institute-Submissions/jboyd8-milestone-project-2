@@ -123,7 +123,7 @@ function showAttacksByOutcome(ndx) {
 }
 
 $(document).ready( function () {
-    $('#table').DataTable( {
+    /*$('#table').DataTable( {
        data: (d3.csv, "assets/data/data.csv"),
        columns: [
            {title: "Case Number"},
@@ -141,7 +141,7 @@ $(document).ready( function () {
            {title: "Time"},
            {title: "Species"}
        ]
-   });
+   });*/
 
     $('.instruction-button').on('click', function() {
         $('.jumbotron').slideToggle('slow')
