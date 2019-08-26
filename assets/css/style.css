@@ -31,7 +31,8 @@ section {
     color: #f7f9fb;
 }
 
-h3 {
+.heading-button {
+    width: 90%;
     background-color: #5085a5;
     color: #f7f9fb;
     border: 1px black solid;
