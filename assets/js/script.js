@@ -125,6 +125,52 @@ function makeGraphs(error, data) {
         </ul>');
 
 
+    //Create object to store counts of areas
+    var areaObj = {};
+
+    data.forEach(function(d) {
+        var area = d.Area;
+        if(areaObj[area] === undefined) {
+            areaObj[area] = 0;
+        } else {
+            areaObj[area] = areaObj[area] + 1;
+        }
+    });
+
+    data.forEach(function(d) {
+        var area = d.Area;
+        d.Area = areaObj[area];
+    });
+    
+    //Create vars to hold % values of areas - only top 10
+    var florida = (areaObj['Florida'] / 2159) * 100;
+    var newSouthWales = (areaObj['New South Wales'] / 2159) * 100;
+    var hawaii = (areaObj['Hawaii'] / 2159) * 100;
+    var california = (areaObj['California'] / 2159) * 100;
+    var westernAustralia = (areaObj['Western Australia'] / 2159) * 100;
+    var areaUnknown = (areaObj['Unknown'] / 2159) * 100;
+    var southCarolina = (areaObj['South Carolina'] / 2159) * 100;
+    var queensland = (areaObj['Queensland'] / 2159) * 100;
+    var northCarolina = (areaObj['North Carolina'] / 2159) * 100;
+    var westernCapeProvince = (areaObj['Western Cape Province'] / 2159) * 100;
+
+    //Append %s to html
+    $('#area-paragraph').append(' \
+        <ul style="list-style: none;"> \
+            <li>Florida, USA = '+ florida.toFixed(2) +'%<li> \
+            <li>New South Wales, AUS = '+ newSouthWales.toFixed(2) +'%<li> \
+            <li>Hawaii, USA = '+ hawaii.toFixed(2) +'%<li> \
+            <li>California, USA = '+ california.toFixed(2) +'%<li> \
+            <li>Western Australia, AUS = '+ westernAustralia.toFixed(2) +'%<li> \
+            <li>Unknown = '+ areaUnknown.toFixed(2) +'%<li> \
+            <li>South Carolina, USA = '+ southCarolina.toFixed(2) +'%<li> \
+            <li>Queensland, AUS = '+ queensland.toFixed(2) +'%<li> \
+            <li>North Carolina, USA = '+ northCarolina.toFixed(2) +'%<li> \
+            <li>Western Cape Province, SA = '+ westernCapeProvince.toFixed(2) +'%<li> \
+        </ul> \
+        <small>Note: Only showing top 10</small>');
+
+
     //Create an object to store counts of outcomes
     var fatalObj = {};
 
