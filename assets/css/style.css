@@ -25,10 +25,17 @@ section {
     background-color: #31708E;
 }
 
-.jumbotron {
+.jumbotron,
+.percentages {
     display: none;
     background-color: #5085a5;
     color: #f7f9fb;
+}
+
+.percentages {
+    border-radius: .3rem;
+    text-align: center;
+    margin-left: 3rem;
 }
 
 .heading-button {
@@ -38,11 +45,14 @@ section {
     border: 1px black solid;
     border-radius: 5px;
     margin: 3rem;
+    margin-bottom: 0;
     min-height: 3rem;
     padding: 1rem;
 }
 
-
+.charts {
+    margin-top: 3rem;
+}
 
 .bar-chart, .pie-chart {
     width: 100%;

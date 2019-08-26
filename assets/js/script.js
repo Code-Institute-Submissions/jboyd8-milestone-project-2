@@ -18,7 +18,7 @@ function makeGraphs(error, data) {
     showAttacksByOutcome(ndx);
 
     dc.renderAll();
-}
+};
 
 function filterAttacksByYear(ndx) {
     var dim = ndx.dimension(dc.pluck('Year'));
@@ -28,7 +28,7 @@ function filterAttacksByYear(ndx) {
         .dimension(dim)
         .group(group)
         .promptText('Show all years')
-}
+};
 
 function filterAttacksByType(ndx) {
     var dim = ndx.dimension(dc.pluck('Type'));
@@ -38,7 +38,7 @@ function filterAttacksByType(ndx) {
         .dimension(dim)
         .group(group)
         .promptText('Show all types')
-}
+};
 
 function filterAttacksByOutcome(ndx) {
     var dim = ndx.dimension(dc.pluck('Fatal (Y/N)'));
@@ -48,7 +48,7 @@ function filterAttacksByOutcome(ndx) {
         .dimension(dim)
         .group(group)
         .promptText('Show all outcomes')
-}
+};
 
 function showAttacksByYear(ndx) {
     var dim = ndx.dimension(dc.pluck('Year'));
@@ -64,7 +64,7 @@ function showAttacksByYear(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .yAxis().ticks(20)
-}
+};
 
 function showAttacksByCountry(ndx) {
     var dim = ndx.dimension(dc.pluck('Country'));
@@ -81,7 +81,7 @@ function showAttacksByCountry(ndx) {
         .xUnits(dc.units.ordinal)
         //.legend(dc.legend().x(0).y(0).itemHeight(15).gap(0))
         .yAxis().ticks(20)
-}
+};
 
 function showAttacksByReason(ndx) {
     var dim = ndx.dimension(dc.pluck('Type'));
@@ -94,7 +94,7 @@ function showAttacksByReason(ndx) {
         .dimension(dim)
         .group(group)
         .legend(dc.legend().x(0).y(0));
-}
+};
 
 function showAttacksByArea(ndx) {
     var dim = ndx.dimension(dc.pluck('Area'));
@@ -107,7 +107,7 @@ function showAttacksByArea(ndx) {
         .dimension(dim)
         .group(group)
         .legend(dc.legend().x(0).y(0));
-}
+};
 
 function showAttacksByOutcome(ndx) {
     var dim = ndx.dimension(dc.pluck('Fatal (Y/N)'));
@@ -120,7 +120,7 @@ function showAttacksByOutcome(ndx) {
         .dimension(dim)
         .group(group)
         .legend(dc.legend().x(0).y(0));
-}
+};
 
 $(document).ready( function () {
 
@@ -146,11 +146,32 @@ $(document).ready( function () {
 
     $('.instruction-button').on('click', function() {
         $('.jumbotron').slideToggle('slow')
-    })
+    });
+
+    $('#year-button').on('click', function() {
+        $('#year-percentages').slideToggle('slow')
+    });
+
+    $('#country-button').on('click', function() {
+        $('#country-percentages').slideToggle('slow')
+    });
+
+    $('#type-button').on('click', function() {
+        $('#type-percentages').slideToggle('slow')
+    });
+
+    $('#area-button').on('click', function() {
+        $('#area-percentages').slideToggle('slow')
+    });
+
+    $('#fatal-button').on('click', function() {
+        $('#fatal-percentages').slideToggle('slow')
+    });
+
 
     //functionality for the reset button. Reset all filters and re-render charts
     $('#reset-button').on('click', function() {
         dc.filterAll();
         dc.renderAll();
-    })
+    });
 });
