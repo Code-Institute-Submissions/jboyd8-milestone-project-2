@@ -40,64 +40,64 @@ function makeGraphs(error, data) {
 function calculateYearPercentages(data) {
     var countObj = {};
 
-    data.forEach(function(d) {
+    data.forEach(function (d) {
         var year = d.Year;
-        if(countObj[year] === undefined) {
+        if (countObj[year] === undefined) {
             countObj[year] = 0;
         } else {
             countObj[year] = countObj[year] + 1;
         }
     });
 
-    data.forEach(function(d) {
+    data.forEach(function (d) {
         var year = d.Year;
         d.Year = countObj[year];
     });
 
     //Create variables to stores the percentage values in.
-    var year2000 = (countObj[2000] / 2159) * 100;
-    var year2001 = (countObj[2001] / 2159) * 100;
-    var year2002 = (countObj[2002] / 2159) * 100;
-    var year2003 = (countObj[2003] / 2159) * 100;
-    var year2004 = (countObj[2004] / 2159) * 100;
-    var year2005 = (countObj[2005] / 2159) * 100;
-    var year2006 = (countObj[2006] / 2159) * 100;
-    var year2007 = (countObj[2007] / 2159) * 100;
-    var year2008 = (countObj[2008] / 2159) * 100;
-    var year2009 = (countObj[2009] / 2159) * 100;
-    var year2010 = (countObj[2010] / 2159) * 100;
-    var year2011 = (countObj[2011] / 2159) * 100;
-    var year2012 = (countObj[2012] / 2159) * 100;
-    var year2013 = (countObj[2013] / 2159) * 100;
-    var year2014 = (countObj[2014] / 2159) * 100;
-    var year2015 = (countObj[2015] / 2159) * 100;
-    var year2016 = (countObj[2016] / 2159) * 100;
-    var year2017 = (countObj[2017] / 2159) * 100;
-    var year2018 = (countObj[2018] / 2159) * 100;
+    var year2000 = (countObj[2000] / 1868) * 100;
+    var year2001 = (countObj[2001] / 1868) * 100;
+    var year2002 = (countObj[2002] / 1868) * 100;
+    var year2003 = (countObj[2003] / 1868) * 100;
+    var year2004 = (countObj[2004] / 1868) * 100;
+    var year2005 = (countObj[2005] / 1868) * 100;
+    var year2006 = (countObj[2006] / 1868) * 100;
+    var year2007 = (countObj[2007] / 1868) * 100;
+    var year2008 = (countObj[2008] / 1868) * 100;
+    var year2009 = (countObj[2009] / 1868) * 100;
+    var year2010 = (countObj[2010] / 1868) * 100;
+    var year2011 = (countObj[2011] / 1868) * 100;
+    var year2012 = (countObj[2012] / 1868) * 100;
+    var year2013 = (countObj[2013] / 1868) * 100;
+    var year2014 = (countObj[2014] / 1868) * 100;
+    var year2015 = (countObj[2015] / 1868) * 100;
+    var year2016 = (countObj[2016] / 1868) * 100;
+    var year2017 = (countObj[2017] / 1868) * 100;
+    var year2018 = (countObj[2018] / 1868) * 100;
 
 
     //append a list to index.html with percentage values shown.
     $('#year-paragraph').append(' \
         <ul style="list-style: none;"> \
-            <li>2000 = '+ year2000.toFixed(2) +'%<li> \
-            <li>2001 = '+ year2001.toFixed(2) +'%<li> \
-            <li>2002 = '+ year2002.toFixed(2) +'%<li> \
-            <li>2003 = '+ year2003.toFixed(2) +'%<li> \
-            <li>2004 = '+ year2004.toFixed(2) +'%<li> \
-            <li>2005 = '+ year2005.toFixed(2) +'%<li> \
-            <li>2006 = '+ year2006.toFixed(2) +'%<li> \
-            <li>2007 = '+ year2007.toFixed(2) +'%<li> \
-            <li>2008 = '+ year2008.toFixed(2) +'%<li> \
-            <li>2009 = '+ year2009.toFixed(2) +'%<li> \
-            <li>2010 = '+ year2010.toFixed(2) +'%<li> \
-            <li>2011 = '+ year2011.toFixed(2) +'%<li> \
-            <li>2012 = '+ year2012.toFixed(2) +'%<li> \
-            <li>2013 = '+ year2013.toFixed(2) +'%<li> \
-            <li>2014 = '+ year2014.toFixed(2) +'%<li> \
-            <li>2015 = '+ year2015.toFixed(2) +'%<li> \
-            <li>2016 = '+ year2016.toFixed(2) +'%<li> \
-            <li>2017 = '+ year2017.toFixed(2) +'%<li> \
-            <li>2018 = '+ year2018.toFixed(2) +'%<li> \
+            <li>2000 = '+ year2000.toFixed(2) + '%<li> \
+            <li>2001 = '+ year2001.toFixed(2) + '%<li> \
+            <li>2002 = '+ year2002.toFixed(2) + '%<li> \
+            <li>2003 = '+ year2003.toFixed(2) + '%<li> \
+            <li>2004 = '+ year2004.toFixed(2) + '%<li> \
+            <li>2005 = '+ year2005.toFixed(2) + '%<li> \
+            <li>2006 = '+ year2006.toFixed(2) + '%<li> \
+            <li>2007 = '+ year2007.toFixed(2) + '%<li> \
+            <li>2008 = '+ year2008.toFixed(2) + '%<li> \
+            <li>2009 = '+ year2009.toFixed(2) + '%<li> \
+            <li>2010 = '+ year2010.toFixed(2) + '%<li> \
+            <li>2011 = '+ year2011.toFixed(2) + '%<li> \
+            <li>2012 = '+ year2012.toFixed(2) + '%<li> \
+            <li>2013 = '+ year2013.toFixed(2) + '%<li> \
+            <li>2014 = '+ year2014.toFixed(2) + '%<li> \
+            <li>2015 = '+ year2015.toFixed(2) + '%<li> \
+            <li>2016 = '+ year2016.toFixed(2) + '%<li> \
+            <li>2017 = '+ year2017.toFixed(2) + '%<li> \
+            <li>2018 = '+ year2018.toFixed(2) + '%<li> \
         </ul>');
 };
 
@@ -110,23 +110,50 @@ function calculateYearPercentages(data) {
 function calculateCountryPercentages(data) {
     var countryObj = {};
 
-    data.forEach(function(d) {
+    data.forEach(function (d) {
         var country = d.Country;
-        if(countryObj[country] === undefined) {
+        if (countryObj[country] === undefined) {
             countryObj[country] = 0;
         } else {
             countryObj[country] = countryObj[country] + 1;
         }
     });
 
-    data.forEach(function(d) {
+    data.forEach(function (d) {
         var country = d.Country;
-        d.Year = countryObj[country];
+        d.Country = countryObj[country];
     });
 
+    //Create variables to stores the percentage values in.
+    var australia = (countryObj['AUSTRALIA'] / 1868) * 100;
+    var bahamas = (countryObj['BAHAMAS'] / 1868) * 100;
+    var brazil = (countryObj['BRAZIL'] / 1868) * 100;
+    var egypt = (countryObj['EGYPT'] / 1868) * 100;
+    var newCaledonia = (countryObj['NEW CALEDONIA'] / 1868) * 100;
+    var newZealand = (countryObj['NEW ZEALAND'] / 1868) * 100;
+    var reunion = (countryObj['REUNION'] / 1868) * 100;
+    var southAfrica = (countryObj['SOUTH AFRICA'] / 1868) * 100;
+    var mexico = (countryObj['MEXICO'] / 1868) * 100;
+    var usa = (countryObj['USA'] / 1868) * 100;
 
+    //append %s to html
+    $('#country-paragraph').append(' \
+        <ul style="list-style: none;"> \
+            <li>Australia = '+ australia.toFixed(2) + '%<li> \
+            <li>Bahamas = '+ bahamas.toFixed(2) + '%<li> \
+            <li>Brazil = '+ brazil.toFixed(2) + '%<li> \
+            <li>Egypt = '+ egypt.toFixed(2) + '%<li> \
+            <li>Mexico = '+ mexico.toFixed(2) + '%<li> \
+            <li>New Caledonia = '+ newCaledonia.toFixed(2) + '%<li> \
+            <li>New Zealand = '+ newZealand.toFixed(2) + '%<li> \
+            <li>Reunion = '+ reunion.toFixed(2) + '%<li> \
+            <li>South Africa = '+ southAfrica.toFixed(2) + '%<li> \
+            <li>USA = '+ usa.toFixed(2) + '%<li> \
+        </ul>');
 
     
+    console.log(usa)
+
     /* Used below to push object items to array and then sort so 
         I could pick out top ten countries
 
@@ -152,41 +179,41 @@ function calculateTypePercentages(data) {
     //Create an object to store counts of types
     var typeObj = {};
 
-    data.forEach(function(d) {
+    data.forEach(function (d) {
         var type = d.Type;
-        if(typeObj[type] === undefined) {
+        if (typeObj[type] === undefined) {
             typeObj[type] = 0;
         } else {
             typeObj[type] = typeObj[type] + 1;
         }
     });
 
-    data.forEach(function(d) {
+    data.forEach(function (d) {
         var type = d.Type;
         d.Type = typeObj[type];
     });
 
     //Create variables to store %s of types
-    var typeInvalid = (typeObj['Invalid'] / 2159) * 100;
-    var typeProvoked = (typeObj['Provoked'] / 2159) * 100;
-    var typeQuestionable = (typeObj['Questionable'] / 2159) * 100;
-    var typeSD = (typeObj['Sea Disaster'] / 2159) * 100;
-    var typeUI = (typeObj['Under investigation'] / 2159) * 100;
-    var typeUnknown = (typeObj['Unknown'] / 2159) * 100;
-    var typeUnprovoked = (typeObj['Unprovoked'] / 2159) * 100;
-    var typeWatercraft = (typeObj['Watercraft'] / 2159) * 100;
+    var typeInvalid = (typeObj['Invalid'] / 1868) * 100;
+    var typeProvoked = (typeObj['Provoked'] / 1868) * 100;
+    var typeQuestionable = (typeObj['Questionable'] / 1868) * 100;
+    var typeSD = (typeObj['Sea Disaster'] / 1868) * 100;
+    var typeUI = (typeObj['Under investigation'] / 1868) * 100;
+    var typeUnknown = (typeObj['Unknown'] / 1868) * 100;
+    var typeUnprovoked = (typeObj['Unprovoked'] / 1868) * 100;
+    var typeWatercraft = (typeObj['Watercraft'] / 1868) * 100;
 
     //append %s to html
     $('#type-paragraph').append(' \
         <ul style="list-style: none;"> \
-            <li>Invalid = '+ typeInvalid.toFixed(2) +'%<li> \
-            <li>Provoked = '+ typeProvoked.toFixed(2) +'%<li> \
-            <li>Questionable = '+ typeQuestionable.toFixed(2) +'%<li> \
-            <li>Sea Disaster = '+ typeSD.toFixed(2) +'%<li> \
-            <li>Under Investigation = '+ typeUI.toFixed(2) +'%<li> \
-            <li>Unknown = '+ typeUnknown.toFixed(2) +'%<li> \
-            <li>Unprovoked = '+ typeUnprovoked.toFixed(2) +'%<li> \
-            <li>Watercraft = '+ typeWatercraft.toFixed(2) +'%<li> \
+            <li>Invalid = '+ typeInvalid.toFixed(2) + '%<li> \
+            <li>Provoked = '+ typeProvoked.toFixed(2) + '%<li> \
+            <li>Questionable = '+ typeQuestionable.toFixed(2) + '%<li> \
+            <li>Sea Disaster = '+ typeSD.toFixed(2) + '%<li> \
+            <li>Under Investigation = '+ typeUI.toFixed(2) + '%<li> \
+            <li>Unknown = '+ typeUnknown.toFixed(2) + '%<li> \
+            <li>Unprovoked = '+ typeUnprovoked.toFixed(2) + '%<li> \
+            <li>Watercraft = '+ typeWatercraft.toFixed(2) + '%<li> \
         </ul>');
 };
 
@@ -200,45 +227,45 @@ function calculateAreaPercentages(data) {
     //Create object to store counts of areas
     var areaObj = {};
 
-    data.forEach(function(d) {
+    data.forEach(function (d) {
         var area = d.Area;
-        if(areaObj[area] === undefined) {
+        if (areaObj[area] === undefined) {
             areaObj[area] = 0;
         } else {
             areaObj[area] = areaObj[area] + 1;
         }
     });
 
-    data.forEach(function(d) {
+    data.forEach(function (d) {
         var area = d.Area;
         d.Area = areaObj[area];
     });
-    
+
     //Create vars to hold % values of areas - only top 10
-    var florida = (areaObj['Florida'] / 2159) * 100;
-    var newSouthWales = (areaObj['New South Wales'] / 2159) * 100;
-    var hawaii = (areaObj['Hawaii'] / 2159) * 100;
-    var california = (areaObj['California'] / 2159) * 100;
-    var westernAustralia = (areaObj['Western Australia'] / 2159) * 100;
-    var areaUnknown = (areaObj['Unknown'] / 2159) * 100;
-    var southCarolina = (areaObj['South Carolina'] / 2159) * 100;
-    var queensland = (areaObj['Queensland'] / 2159) * 100;
-    var northCarolina = (areaObj['North Carolina'] / 2159) * 100;
-    var westernCapeProvince = (areaObj['Western Cape Province'] / 2159) * 100;
+    var florida = (areaObj['Florida'] / 1868) * 100;
+    var newSouthWales = (areaObj['New South Wales'] / 1868) * 100;
+    var hawaii = (areaObj['Hawaii'] / 1868) * 100;
+    var california = (areaObj['California'] / 1868) * 100;
+    var westernAustralia = (areaObj['Western Australia'] / 1868) * 100;
+    var areaUnknown = (areaObj['Unknown'] / 1868) * 100;
+    var southCarolina = (areaObj['South Carolina'] / 1868) * 100;
+    var queensland = (areaObj['Queensland'] / 1868) * 100;
+    var northCarolina = (areaObj['North Carolina'] / 1868) * 100;
+    var westernCapeProvince = (areaObj['Western Cape Province'] / 1868) * 100;
 
     //Append %s to html
     $('#area-paragraph').append(' \
         <ul style="list-style: none;"> \
-            <li>Florida, USA = '+ florida.toFixed(2) +'%<li> \
-            <li>New South Wales, AUS = '+ newSouthWales.toFixed(2) +'%<li> \
-            <li>Hawaii, USA = '+ hawaii.toFixed(2) +'%<li> \
-            <li>California, USA = '+ california.toFixed(2) +'%<li> \
-            <li>Western Australia, AUS = '+ westernAustralia.toFixed(2) +'%<li> \
-            <li>Unknown = '+ areaUnknown.toFixed(2) +'%<li> \
-            <li>South Carolina, USA = '+ southCarolina.toFixed(2) +'%<li> \
-            <li>Queensland, AUS = '+ queensland.toFixed(2) +'%<li> \
-            <li>North Carolina, USA = '+ northCarolina.toFixed(2) +'%<li> \
-            <li>Western Cape Province, SA = '+ westernCapeProvince.toFixed(2) +'%<li> \
+            <li>Florida, USA = '+ florida.toFixed(2) + '%<li> \
+            <li>New South Wales, AUS = '+ newSouthWales.toFixed(2) + '%<li> \
+            <li>Hawaii, USA = '+ hawaii.toFixed(2) + '%<li> \
+            <li>California, USA = '+ california.toFixed(2) + '%<li> \
+            <li>Western Australia, AUS = '+ westernAustralia.toFixed(2) + '%<li> \
+            <li>Unknown = '+ areaUnknown.toFixed(2) + '%<li> \
+            <li>South Carolina, USA = '+ southCarolina.toFixed(2) + '%<li> \
+            <li>Queensland, AUS = '+ queensland.toFixed(2) + '%<li> \
+            <li>North Carolina, USA = '+ northCarolina.toFixed(2) + '%<li> \
+            <li>Western Cape Province, SA = '+ westernCapeProvince.toFixed(2) + '%<li> \
         </ul> \
         <small>Note: Only showing top 10</small>');
 };
@@ -253,31 +280,31 @@ function calculateFatalPercentages(data) {
     //Create an object to store counts of outcomes
     var fatalObj = {};
 
-    data.forEach(function(d) {
+    data.forEach(function (d) {
         var outcome = d.Fatal;
-        if(fatalObj[outcome] === undefined) {
+        if (fatalObj[outcome] === undefined) {
             fatalObj[outcome] = 0;
         } else {
             fatalObj[outcome] = fatalObj[outcome] + 1;
         }
     });
 
-    data.forEach(function(d) {
+    data.forEach(function (d) {
         var outcome = d.Fatal;
         d.Fatal = fatalObj[outcome];
     });
 
     //variables to calculate % of each outcome
-    var outcomeY = (fatalObj['Y'] / 2159) * 100;
-    var outcomeN = (fatalObj['N'] / 2159) * 100;
-    var outcomeUnknown = (fatalObj['Unknown'] / 2159) * 100;
+    var outcomeY = (fatalObj['Y'] / 1868) * 100;
+    var outcomeN = (fatalObj['N'] / 1868) * 100;
+    var outcomeUnknown = (fatalObj['Unknown'] / 1868) * 100;
 
     //append %s to html
     $('#fatal-paragraph').append(' \
         <ul style="list-style: none;"> \
-            <li>Y = '+ outcomeY.toFixed(2) +'%<li> \
-            <li>N = '+ outcomeN.toFixed(2) +'%<li> \
-            <li>Unknown = '+ outcomeUnknown.toFixed(2) +'%<li> \
+            <li>Y = '+ outcomeY.toFixed(2) + '%<li> \
+            <li>N = '+ outcomeN.toFixed(2) + '%<li> \
+            <li>Unknown = '+ outcomeUnknown.toFixed(2) + '%<li> \
         </ul>');
 };
 
@@ -326,7 +353,7 @@ function showAttacksByYear(ndx) {
     dc.barChart('#chart-one')
         .width(500)
         .height(300)
-        .margins({top: 10, right: 10, bottom: 55, left: 40})
+        .margins({ top: 10, right: 10, bottom: 55, left: 40 })
         .dimension(dim)
         .group(group)
         .transitionDuration(500)
@@ -344,7 +371,7 @@ function showAttacksByCountry(ndx) {
     dc.barChart('#chart-two')
         .width(500)
         .height(300)
-        .margins({top: 10, right: 10, bottom: 55, left: 40})
+        .margins({ top: 10, right: 10, bottom: 55, left: 40 })
         .dimension(dim)
         .group(group)
         .transitionDuration(500)
@@ -402,37 +429,37 @@ function showAttacksByOutcome(ndx) {
         .legend(dc.legend().x(0).y(0));
 };
 
-$(document).ready( function () {
+$(document).ready(function () {
     /* 6 functions below all to create
         a slide toggle and reveal information
         after clicking on a button */
-    $('.instruction-button').on('click', function() {
+    $('.instruction-button').on('click', function () {
         $('.jumbotron').slideToggle('slow')
     });
 
-    $('#year-button').on('click', function() {
+    $('#year-button').on('click', function () {
         $('#year-percentages').slideToggle('slow')
     });
 
-    $('#country-button').on('click', function() {
+    $('#country-button').on('click', function () {
         $('#country-percentages').slideToggle('slow')
     });
 
-    $('#type-button').on('click', function() {
+    $('#type-button').on('click', function () {
         $('#type-percentages').slideToggle('slow')
     });
 
-    $('#area-button').on('click', function() {
+    $('#area-button').on('click', function () {
         $('#area-percentages').slideToggle('slow')
     });
 
-    $('#fatal-button').on('click', function() {
+    $('#fatal-button').on('click', function () {
         $('#fatal-percentages').slideToggle('slow')
     });
 
 
     /* Reset all filters and re-render charts */
-    $('#reset-button').on('click', function() {
+    $('#reset-button').on('click', function () {
         dc.filterAll();
         dc.renderAll();
     });
