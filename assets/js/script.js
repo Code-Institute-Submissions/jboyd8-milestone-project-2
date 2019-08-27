@@ -289,7 +289,8 @@ function showAttacksByArea(ndx) {
         .radius(150)
         .dimension(dim)
         .group(group)
-        .legend(dc.legend().x(0).y(0));
+        .legend(dc.legend().x(0).y(0))
+        .cap(10);
 };
 
 function showAttacksByOutcome(ndx) {
