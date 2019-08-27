@@ -1,18 +1,16 @@
 
-//Call queue so data only renders once it is ready.
+//Call queue so data only renders once it is ready. Also allows us to access the data in the CSV
 queue()
     .defer(d3.csv, "assets/data/data.csv")
     .await(makeGraphs);
 
-//One function where all the charts are called and the crossfilter variable is created as well as some percentage caluculations.
+/* One function where all the charts are called and the crossfilter 
+    variable is created as well as the percentage caluculations.
+*/
 function makeGraphs(error, data) {
+    /*Create a filter to pass to the chart function 
+      so that the charts are interactive */
     var ndx = crossfilter(data);
-
-    calculateYearPercentages(data);
-    calculateCountryPercentages(data);
-    calculateTypePercentages(data);
-    calculateAreaPercentages(data);
-    calculateFatalPercentages(data);
 
     filterAttacksByYear(ndx);
     filterAttacksByType(ndx);
@@ -24,6 +22,12 @@ function makeGraphs(error, data) {
     showAttacksByOutcome(ndx);
 
     dc.renderAll();
+
+    calculateYearPercentages(data);
+    calculateCountryPercentages(data);
+    calculateTypePercentages(data);
+    calculateAreaPercentages(data);
+    calculateFatalPercentages(data);
 };
 
 function calculateYearPercentages(data) {
