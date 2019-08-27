@@ -51,15 +51,15 @@ dataset was not complete.
 Below is a list of technolgies I used to build my dahsboard.
 * HTML - HTML5 provided the structure of my website. I tried to use semantic elements where possible to ensure the best structure.
 * CSS - Used to style my page.
-* [Bootstrap]() - Used primarily for the grid system. I find this a really good way to position my elements where I want them.
-* [VSCode]() - This is my text editor. It has a built in terminal so I could do everything I needed to from one environment.
-* [Git]() - Git was used for version control. Allowing me to create backups whenever significant changes were made to my code.
-* [GitHub]() - This is where my repository is held externally. I will aslo use GitHub pages to deploy my website.
-* [Javascript/Jquery]() - 
-* [d3.js]()
-* [crossfilter.js]()
-* [dc.js](https://dc-js.github.io/dc.js/)
-* [Google Fonts]() - Used to import specific fonts I wanted to use on my website.
+* [Bootstrap](https://getbootstrap.com/) - Used primarily for the grid system. I find this a really good way to position my elements where I want them.
+* [VSCode](https://code.visualstudio.com) - This is my text editor. It has a built in terminal so I could do everything I needed to from one environment.
+* [Git](https://git-scm.com) - Git was used for version control. Allowing me to create backups whenever significant changes were made to my code.
+* [GitHub](https://github.com/) - This is where my repository is held externally. I will aslo use GitHub pages to deploy my website.
+* [Javascript/Jquery](https://jquery.com/) - Utilised jQuery to manipulate the DOM and add HTML.
+* [d3.js](https://d3js.org/) - This is the library that Crossfilter.js and DC.js are built on top of.
+* [crossfilter.js](https://github.com/crossfilter/crossfilter) - I utilised this to make my charts interactive by allowing them to be filtered.
+* [dc.js](https://dc-js.github.io/dc.js/) - Used to build all charts in dashboard.
+* [Google Fonts](https://fonts.google.com/) - Used to import specific fonts I wanted to use on my website.
 
 
 ## Testing
@@ -103,6 +103,13 @@ To deploy the website to GitHub pages, I followed the below steps:
 
 ## Credits
 ---
+* To my mentor, [Reuben Ferrante](https://github.com/arex18), for guding me through the process and offering assistance when neccesary to point me in the right direction.
+* The Slack community. The help a student is able to receive from the other students is a really great tool to have.
+* [HTML Color Code](https://htmlcolorcodes.com/) - Used this website in order to obtain hex codes whilst styling my pages.
+* [Clip Art Mag](http://clipartmag.com/) - Used this free website to get the favicon for my website.
+* [W3C Validator](https://validator.w3.org/#validate_by_input) - A validator used to check my HTML and CSS structure and format periodically throughout the build.
+* [Cacoo](https://app.cacoo.com/o/8g0cBCgjuA/recent) - Used to build wireframes.
+
 
 
 #### Copied Code
