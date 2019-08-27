@@ -70,7 +70,7 @@ Below is a list of technolgies I used to build my dahsboard.
 
 ## Bugs
 ---
-
+I have added overflow scroll to my charts via CSS. I was unable to find a way to make my charts responsive, so this was the most visually pleasing way I could do it.
 
 
 ## Deployment
