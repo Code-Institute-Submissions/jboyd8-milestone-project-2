@@ -1,5 +1,6 @@
 
-//Call queue so data only renders once it is ready. Also allows us to access the data in the CSV
+/* Call queue so data only renders once it is ready. 
+    Also allows us to access the data in the CSV */
 queue()
     .defer(d3.csv, "assets/data/data.csv")
     .await(makeGraphs);
@@ -30,8 +31,13 @@ function makeGraphs(error, data) {
     calculateFatalPercentages(data);
 };
 
+/* Create an object to store the data in fromt he CSV. Then iterate thorugh the
+    object in order to store the number of occurences for each year. Then store
+    each year as a percentage in a variable and append it to the HTML.
+    I found this code on stack overflow at 
+    https://stackoverflow.com/questions/38296484/count-text-fields-from-csv-dataset-in-d3-js . 
+    It has been adjusted to suit my needs. Not including the variables and the jQuery to manipulate the DOM */
 function calculateYearPercentages(data) {
-    //Create an object to store count totals of each year. I found this code on stack overflow at https://stackoverflow.com/questions/38296484/count-text-fields-from-csv-dataset-in-d3-js . It has been adjusted to suit my needs.
     var countObj = {};
 
     data.forEach(function(d) {
@@ -47,8 +53,6 @@ function calculateYearPercentages(data) {
         var year = d.Year;
         d.Year = countObj[year];
     });
-
-    //Code above this line was based on code found on Stack Overflow
 
     //Create variables to stores the percentage values in.
     var year2000 = (countObj[2000] / 2159) * 100;
@@ -97,10 +101,22 @@ function calculateYearPercentages(data) {
         </ul>');
 };
 
+/* Create an object to store the data in fromt he CSV. Then iterate thorugh the
+    object in order to store the number of occurences for each country. Then store
+    each year as a percentage in a variable and append it to the HTML.
+    I found this code on stack overflow at 
+    https://stackoverflow.com/questions/38296484/count-text-fields-from-csv-dataset-in-d3-js . 
+    It has been adjusted to suit my needs. Not including the variables and the jQuery to manipulate the DOM */
 function calculateCountryPercentages(data) {
 
 };
 
+/* Create an object to store the data in fromt he CSV. Then iterate thorugh the
+    object in order to store the number of occurences for each type. Then store
+    each year as a percentage in a variable and append it to the HTML.
+    I found this code on stack overflow at 
+    https://stackoverflow.com/questions/38296484/count-text-fields-from-csv-dataset-in-d3-js . 
+    It has been adjusted to suit my needs. Not including the variables and the jQuery to manipulate the DOM */
 function calculateTypePercentages(data) {
     //Create an object to store counts of types
     var typeObj = {};
@@ -119,7 +135,7 @@ function calculateTypePercentages(data) {
         d.Type = typeObj[type];
     });
 
-    //Create variables to store %sof types
+    //Create variables to store %s of types
     var typeInvalid = (typeObj['Invalid'] / 2159) * 100;
     var typeProvoked = (typeObj['Provoked'] / 2159) * 100;
     var typeQuestionable = (typeObj['Questionable'] / 2159) * 100;
@@ -143,6 +159,12 @@ function calculateTypePercentages(data) {
         </ul>');
 };
 
+/* Create an object to store the data in fromt he CSV. Then iterate thorugh the
+    object in order to store the number of occurences for each area. Then store
+    each year as a percentage in a variable and append it to the HTML.
+    I found this code on stack overflow at 
+    https://stackoverflow.com/questions/38296484/count-text-fields-from-csv-dataset-in-d3-js . 
+    It has been adjusted to suit my needs. Not including the variables and the jQuery to manipulate the DOM */
 function calculateAreaPercentages(data) {
     //Create object to store counts of areas
     var areaObj = {};
@@ -190,6 +212,12 @@ function calculateAreaPercentages(data) {
         <small>Note: Only showing top 10</small>');
 };
 
+/* Create an object to store the data in fromt he CSV. Then iterate thorugh the
+    object in order to store the number of occurences for each outcome. Then store
+    each year as a percentage in a variable and append it to the HTML.
+    I found this code on stack overflow at 
+    https://stackoverflow.com/questions/38296484/count-text-fields-from-csv-dataset-in-d3-js . 
+    It has been adjusted to suit my needs. Not including the variables and the jQuery to manipulate the DOM */
 function calculateFatalPercentages(data) {
     //Create an object to store counts of outcomes
     var fatalObj = {};
@@ -222,6 +250,8 @@ function calculateFatalPercentages(data) {
         </ul>');
 };
 
+/*Create a dropdown box which allows the user to
+    filter the data by year */
 function filterAttacksByYear(ndx) {
     var dim = ndx.dimension(dc.pluck('Year'));
     var group = dim.group();
@@ -232,6 +262,8 @@ function filterAttacksByYear(ndx) {
         .promptText('Show all years')
 };
 
+/*Create a dropdown box which allows the user to
+    filter the data by type */
 function filterAttacksByType(ndx) {
     var dim = ndx.dimension(dc.pluck('Type'));
     var group = dim.group();
@@ -242,6 +274,8 @@ function filterAttacksByType(ndx) {
         .promptText('Show all types')
 };
 
+/*Create a dropdown box which allows the user to
+    filter the data by outcome */
 function filterAttacksByOutcome(ndx) {
     var dim = ndx.dimension(dc.pluck('Fatal'));
     var group = dim.group();
@@ -252,6 +286,8 @@ function filterAttacksByOutcome(ndx) {
         .promptText('Show all outcomes')
 };
 
+/*Create a bar chart to show the amount of attacks
+    by year */
 function showAttacksByYear(ndx) {
     var dim = ndx.dimension(dc.pluck('Year'));
     var group = dim.group();
@@ -268,6 +304,8 @@ function showAttacksByYear(ndx) {
         .yAxis().ticks(20)
 };
 
+/*Create a bar chart to show the amount of attacks
+    by country */
 function showAttacksByCountry(ndx) {
     var dim = ndx.dimension(dc.pluck('Country'));
     var group = dim.group();
@@ -284,6 +322,8 @@ function showAttacksByCountry(ndx) {
         .yAxis().ticks(20)
 };
 
+/*Create a pie chart to show the amount of attacks
+    by type */
 function showAttacksByReason(ndx) {
     var dim = ndx.dimension(dc.pluck('Type'));
     var group = dim.group();
@@ -297,6 +337,8 @@ function showAttacksByReason(ndx) {
         .legend(dc.legend().x(0).y(0))
 };
 
+/*Create a pie chart to show the amount of attacks
+    by area */
 function showAttacksByArea(ndx) {
     var dim = ndx.dimension(dc.pluck('Area'));
     var group = dim.group();
@@ -314,6 +356,8 @@ function showAttacksByArea(ndx) {
         .minAngleForLabel(0.1)
 };
 
+/*Create a pie chart to show the amount of attacks
+    by outcome */
 function showAttacksByOutcome(ndx) {
     var dim = ndx.dimension(dc.pluck('Fatal'));
     var group = dim.group();
@@ -328,7 +372,9 @@ function showAttacksByOutcome(ndx) {
 };
 
 $(document).ready( function () {
-
+    /* 6 functions below all to create
+        a slide toggle and reveal information
+        after clicking on a button */
     $('.instruction-button').on('click', function() {
         $('.jumbotron').slideToggle('slow')
     });
@@ -354,7 +400,7 @@ $(document).ready( function () {
     });
 
 
-    //functionality for the reset button. Reset all filters and re-render charts
+    /* Reset all filters and re-render charts */
     $('#reset-button').on('click', function() {
         dc.filterAll();
         dc.renderAll();
