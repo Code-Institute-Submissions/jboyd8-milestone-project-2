@@ -8,6 +8,12 @@ queue()
 function makeGraphs(error, data) {
     var ndx = crossfilter(data);
 
+    calculateYearPercentages(data);
+    calculateCountryPercentages(data);
+    calculateTypePercentages(data);
+    calculateAreaPercentages(data);
+    calculateFatalPercentages(data);
+
     filterAttacksByYear(ndx);
     filterAttacksByType(ndx);
     filterAttacksByOutcome(ndx);
@@ -18,9 +24,9 @@ function makeGraphs(error, data) {
     showAttacksByOutcome(ndx);
 
     dc.renderAll();
+};
 
-
-
+function calculateYearPercentages(data) {
     //Create an object to store count totals of each year. I found this code on stack overflow at https://stackoverflow.com/questions/38296484/count-text-fields-from-csv-dataset-in-d3-js . It has been adjusted to suit my needs.
     var countObj = {};
 
@@ -85,7 +91,13 @@ function makeGraphs(error, data) {
             <li>2017 = '+ year2017.toFixed(2) +'%<li> \
             <li>2018 = '+ year2018.toFixed(2) +'%<li> \
         </ul>');
+};
 
+function calculateCountryPercentages(data) {
+
+};
+
+function calculateTypePercentages(data) {
     //Create an object to store counts of types
     var typeObj = {};
 
@@ -125,8 +137,9 @@ function makeGraphs(error, data) {
             <li>Unprovoked = '+ typeUnprovoked.toFixed(2) +'%<li> \
             <li>Watercraft = '+ typeWatercraft.toFixed(2) +'%<li> \
         </ul>');
+};
 
-
+function calculateAreaPercentages(data) {
     //Create object to store counts of areas
     var areaObj = {};
 
@@ -171,8 +184,9 @@ function makeGraphs(error, data) {
             <li>Western Cape Province, SA = '+ westernCapeProvince.toFixed(2) +'%<li> \
         </ul> \
         <small>Note: Only showing top 10</small>');
+};
 
-
+function calculateFatalPercentages(data) {
     //Create an object to store counts of outcomes
     var fatalObj = {};
 
@@ -202,8 +216,6 @@ function makeGraphs(error, data) {
             <li>N = '+ outcomeN.toFixed(2) +'%<li> \
             <li>Unknown = '+ outcomeUnknown.toFixed(2) +'%<li> \
         </ul>');
-
-
 };
 
 function filterAttacksByYear(ndx) {
@@ -312,26 +324,6 @@ function showAttacksByOutcome(ndx) {
 };
 
 $(document).ready( function () {
-
-    /*$('#table').DataTable( {
-       data: (d3.csv, "assets/data/data.csv"),
-       columns: [
-           {title: "Case Number"},
-           {title: "Date"},
-           {title: "Year"},
-           {title: "Type"},
-           {title: "Country"},
-           {title: "Area"},
-           {title: "Location"},
-           {title: "Activity"},
-           {title: "Sex"},
-           {title: "Age"},
-           {title: "Injury"},
-           {title: "Fatal(Y/N"},
-           {title: "Time"},
-           {title: "Species"}
-       ]
-   });*/
 
     $('.instruction-button').on('click', function() {
         $('.jumbotron').slideToggle('slow')
