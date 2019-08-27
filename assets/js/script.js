@@ -19,6 +19,8 @@ function makeGraphs(error, data) {
 
     dc.renderAll();
 
+
+
     //Create an object to store count totals of each year. I found this code on stack overflow at https://stackoverflow.com/questions/38296484/count-text-fields-from-csv-dataset-in-d3-js . It has been adjusted to suit my needs.
     var countObj = {};
 
@@ -271,12 +273,12 @@ function showAttacksByReason(ndx) {
     var group = dim.group();
 
     dc.pieChart('#chart-three')
-        .height(300)
+        .height(350)
         .width(500)
         .radius(150)
         .dimension(dim)
         .group(group)
-        .legend(dc.legend().x(0).y(0));
+        .legend(dc.legend().x(0).y(0))
 };
 
 function showAttacksByArea(ndx) {
@@ -284,13 +286,16 @@ function showAttacksByArea(ndx) {
     var group = dim.group();
 
     dc.pieChart('#chart-four')
-        .height(300)
+        .height(350)
         .width(500)
         .radius(150)
         .dimension(dim)
         .group(group)
-        .legend(dc.legend().x(0).y(0))
-        .cap(10);
+        //.legend(dc.legend().x(0).y(0))
+        .cap(10)
+        .externalLabels(25)
+        .drawPaths(true)
+        .minAngleForLabel(0.1)
 };
 
 function showAttacksByOutcome(ndx) {
