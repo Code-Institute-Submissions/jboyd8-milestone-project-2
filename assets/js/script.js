@@ -108,7 +108,38 @@ function calculateYearPercentages(data) {
     https://stackoverflow.com/questions/38296484/count-text-fields-from-csv-dataset-in-d3-js . 
     It has been adjusted to suit my needs. Not including the variables and the jQuery to manipulate the DOM */
 function calculateCountryPercentages(data) {
+    var countryObj = {};
 
+    data.forEach(function(d) {
+        var country = d.Country;
+        if(countryObj[country] === undefined) {
+            countryObj[country] = 0;
+        } else {
+            countryObj[country] = countryObj[country] + 1;
+        }
+    });
+
+    data.forEach(function(d) {
+        var country = d.Country;
+        d.Year = countryObj[country];
+    });
+
+
+
+    
+    /* Used below to push object items to array and then sort so 
+        I could pick out top ten countries
+
+    var sortObj = []
+    for (country in countryObj) {
+        sortObj.push([country, countryObj[country]]);
+    };
+
+    sortObj.sort(function(a, b) {
+        return a[1] - b[1];
+    });
+
+    console.log(sortObj); */
 };
 
 /* Create an object to store the data in fromt he CSV. Then iterate thorugh the
@@ -295,7 +326,7 @@ function showAttacksByYear(ndx) {
     dc.barChart('#chart-one')
         .width(500)
         .height(300)
-        .margins({top: 10, right: 10, bottom: 30, left: 70})
+        .margins({top: 10, right: 10, bottom: 55, left: 40})
         .dimension(dim)
         .group(group)
         .transitionDuration(500)
@@ -313,7 +344,7 @@ function showAttacksByCountry(ndx) {
     dc.barChart('#chart-two')
         .width(500)
         .height(300)
-        .margins({top: 10, right: 10, bottom: 30, left: 100})
+        .margins({top: 10, right: 10, bottom: 55, left: 40})
         .dimension(dim)
         .group(group)
         .transitionDuration(500)
