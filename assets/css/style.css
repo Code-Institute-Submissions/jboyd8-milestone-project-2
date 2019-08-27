@@ -108,10 +108,11 @@ footer {
 
 #chart-one .x.axis text {
     text-anchor: end !important;
-    transform: rotate(-45deg);
+    transform: rotate(-20deg);
 }
 
 #chart-two .x.axis text {
     text-anchor: end !important;
-    transform: rotate(-90deg);
+    transform: rotate(-15deg);
+    font-size: 0.5rem;
 }
