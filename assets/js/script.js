@@ -19,7 +19,7 @@ function makeGraphs(error, data) {
 
     dc.renderAll();
 
-    //Create an object to store count totals of each year. I found this code on stack overflow at https://stackoverflow.com/questions/38296484/count-text-fields-from-csv-dataset-in-d3-js
+    //Create an object to store count totals of each year. I found this code on stack overflow at https://stackoverflow.com/questions/38296484/count-text-fields-from-csv-dataset-in-d3-js . It has been adjusted to suit my needs.
     var countObj = {};
 
     data.forEach(function(d) {
@@ -36,7 +36,7 @@ function makeGraphs(error, data) {
         d.Year = countObj[year];
     });
 
-    //Code above this line was found on Stack Overflow
+    //Code above this line was based on code found on Stack Overflow
 
     //Create variables to stores the percentage values in.
     var year2000 = (countObj[2000] / 2159) * 100;
