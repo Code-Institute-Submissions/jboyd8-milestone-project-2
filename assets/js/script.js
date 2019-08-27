@@ -29,7 +29,7 @@ function makeGraphs(error, data) {
     calculateTypePercentages(data);
     calculateAreaPercentages(data);
     calculateFatalPercentages(data);
-};
+}
 
 /* Create an object to store the data in fromt he CSV. Then iterate thorugh the
     object in order to store the number of occurences for each year. Then store
@@ -99,7 +99,7 @@ function calculateYearPercentages(data) {
             <li>2017 = '+ year2017.toFixed(2) + '%<li> \
             <li>2018 = '+ year2018.toFixed(2) + '%<li> \
         </ul>');
-};
+}
 
 /* Create an object to store the data in fromt he CSV. Then iterate thorugh the
     object in order to store the number of occurences for each country. Then store
@@ -125,16 +125,16 @@ function calculateCountryPercentages(data) {
     });
 
     //Create variables to stores the percentage values in.
-    var australia = (countryObj['AUSTRALIA'] / 1868) * 100;
-    var bahamas = (countryObj['BAHAMAS'] / 1868) * 100;
-    var brazil = (countryObj['BRAZIL'] / 1868) * 100;
-    var egypt = (countryObj['EGYPT'] / 1868) * 100;
+    var australia = (countryObj.AUSTRALIA / 1868) * 100;
+    var bahamas = (countryObj.BAHAMAS / 1868) * 100;
+    var brazil = (countryObj.BRAZIL / 1868) * 100;
+    var egypt = (countryObj.EGYPT / 1868) * 100;
     var newCaledonia = (countryObj['NEW CALEDONIA'] / 1868) * 100;
     var newZealand = (countryObj['NEW ZEALAND'] / 1868) * 100;
-    var reunion = (countryObj['REUNION'] / 1868) * 100;
+    var reunion = (countryObj.REUNION / 1868) * 100;
     var southAfrica = (countryObj['SOUTH AFRICA'] / 1868) * 100;
-    var mexico = (countryObj['MEXICO'] / 1868) * 100;
-    var usa = (countryObj['USA'] / 1868) * 100;
+    var mexico = (countryObj.MEXICO / 1868) * 100;
+    var usa = (countryObj.USA / 1868) * 100;
 
     //append %s to html
     $('#country-paragraph').append(' \
@@ -151,9 +151,6 @@ function calculateCountryPercentages(data) {
             <li>USA = '+ usa.toFixed(2) + '%<li> \
         </ul>');
 
-    
-    console.log(usa)
-
     /* Used below to push object items to array and then sort so 
         I could pick out top ten countries
 
@@ -167,7 +164,7 @@ function calculateCountryPercentages(data) {
     });
 
     console.log(sortObj); */
-};
+}
 
 /* Create an object to store the data in fromt he CSV. Then iterate thorugh the
     object in order to store the number of occurences for each type. Then store
@@ -194,14 +191,14 @@ function calculateTypePercentages(data) {
     });
 
     //Create variables to store %s of types
-    var typeInvalid = (typeObj['Invalid'] / 1868) * 100;
-    var typeProvoked = (typeObj['Provoked'] / 1868) * 100;
-    var typeQuestionable = (typeObj['Questionable'] / 1868) * 100;
+    var typeInvalid = (typeObj.Invalid / 1868) * 100;
+    var typeProvoked = (typeObj.Provoked / 1868) * 100;
+    var typeQuestionable = (typeObj.Questionable / 1868) * 100;
     var typeSD = (typeObj['Sea Disaster'] / 1868) * 100;
     var typeUI = (typeObj['Under investigation'] / 1868) * 100;
-    var typeUnknown = (typeObj['Unknown'] / 1868) * 100;
-    var typeUnprovoked = (typeObj['Unprovoked'] / 1868) * 100;
-    var typeWatercraft = (typeObj['Watercraft'] / 1868) * 100;
+    var typeUnknown = (typeObj.Unknown / 1868) * 100;
+    var typeUnprovoked = (typeObj.Unprovoked / 1868) * 100;
+    var typeWatercraft = (typeObj.Watercraft / 1868) * 100;
 
     //append %s to html
     $('#type-paragraph').append(' \
@@ -215,7 +212,7 @@ function calculateTypePercentages(data) {
             <li>Unprovoked = '+ typeUnprovoked.toFixed(2) + '%<li> \
             <li>Watercraft = '+ typeWatercraft.toFixed(2) + '%<li> \
         </ul>');
-};
+}
 
 /* Create an object to store the data in fromt he CSV. Then iterate thorugh the
     object in order to store the number of occurences for each area. Then store
@@ -242,14 +239,14 @@ function calculateAreaPercentages(data) {
     });
 
     //Create vars to hold % values of areas - only top 10
-    var florida = (areaObj['Florida'] / 1868) * 100;
+    var florida = (areaObj.Florida / 1868) * 100;
     var newSouthWales = (areaObj['New South Wales'] / 1868) * 100;
-    var hawaii = (areaObj['Hawaii'] / 1868) * 100;
-    var california = (areaObj['California'] / 1868) * 100;
+    var hawaii = (areaObj.Hawaii / 1868) * 100;
+    var california = (areaObj.California / 1868) * 100;
     var westernAustralia = (areaObj['Western Australia'] / 1868) * 100;
-    var areaUnknown = (areaObj['Unknown'] / 1868) * 100;
+    var areaUnknown = (areaObj.Unknown / 1868) * 100;
     var southCarolina = (areaObj['South Carolina'] / 1868) * 100;
-    var queensland = (areaObj['Queensland'] / 1868) * 100;
+    var queensland = (areaObj.Queensland / 1868) * 100;
     var northCarolina = (areaObj['North Carolina'] / 1868) * 100;
     var westernCapeProvince = (areaObj['Western Cape Province'] / 1868) * 100;
 
@@ -268,7 +265,7 @@ function calculateAreaPercentages(data) {
             <li>Western Cape Province, SA = '+ westernCapeProvince.toFixed(2) + '%<li> \
         </ul> \
         <small>Note: Only showing top 10</small>');
-};
+}
 
 /* Create an object to store the data in fromt he CSV. Then iterate thorugh the
     object in order to store the number of occurences for each outcome. Then store
@@ -295,9 +292,9 @@ function calculateFatalPercentages(data) {
     });
 
     //variables to calculate % of each outcome
-    var outcomeY = (fatalObj['Y'] / 1868) * 100;
-    var outcomeN = (fatalObj['N'] / 1868) * 100;
-    var outcomeUnknown = (fatalObj['Unknown'] / 1868) * 100;
+    var outcomeY = (fatalObj.Y / 1868) * 100;
+    var outcomeN = (fatalObj.N / 1868) * 100;
+    var outcomeUnknown = (fatalObj.Unknown / 1868) * 100;
 
     //append %s to html
     $('#fatal-paragraph').append(' \
@@ -306,7 +303,7 @@ function calculateFatalPercentages(data) {
             <li>N = '+ outcomeN.toFixed(2) + '%<li> \
             <li>Unknown = '+ outcomeUnknown.toFixed(2) + '%<li> \
         </ul>');
-};
+}
 
 /*Create a dropdown box which allows the user to
     filter the data by year */
@@ -317,8 +314,8 @@ function filterAttacksByYear(ndx) {
     dc.selectMenu('#year-filter')
         .dimension(dim)
         .group(group)
-        .promptText('Show all years')
-};
+        .promptText('Show all years');
+}
 
 /*Create a dropdown box which allows the user to
     filter the data by type */
@@ -329,8 +326,8 @@ function filterAttacksByType(ndx) {
     dc.selectMenu('#type-filter')
         .dimension(dim)
         .group(group)
-        .promptText('Show all types')
-};
+        .promptText('Show all types');
+}
 
 /*Create a dropdown box which allows the user to
     filter the data by outcome */
@@ -341,8 +338,8 @@ function filterAttacksByOutcome(ndx) {
     dc.selectMenu('#fatal-filter')
         .dimension(dim)
         .group(group)
-        .promptText('Show all outcomes')
-};
+        .promptText('Show all outcomes');
+}
 
 /*Create a bar chart to show the amount of attacks
     by year */
@@ -359,8 +356,8 @@ function showAttacksByYear(ndx) {
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .yAxis().ticks(20)
-};
+        .yAxis().ticks(20);
+}
 
 /*Create a bar chart to show the amount of attacks
     by country */
@@ -377,8 +374,8 @@ function showAttacksByCountry(ndx) {
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .yAxis().ticks(20)
-};
+        .yAxis().ticks(20);
+}
 
 /*Create a pie chart to show the amount of attacks
     by type */
@@ -392,8 +389,8 @@ function showAttacksByReason(ndx) {
         .radius(150)
         .dimension(dim)
         .group(group)
-        .legend(dc.legend().x(0).y(0))
-};
+        .legend(dc.legend().x(0).y(0));
+}
 
 /*Create a pie chart to show the amount of attacks
     by area */
@@ -411,8 +408,8 @@ function showAttacksByArea(ndx) {
         .cap(10)
         .externalLabels(25)
         .drawPaths(true)
-        .minAngleForLabel(0.1)
-};
+        .minAngleForLabel(0.1);
+}
 
 /*Create a pie chart to show the amount of attacks
     by outcome */
@@ -427,34 +424,34 @@ function showAttacksByOutcome(ndx) {
         .dimension(dim)
         .group(group)
         .legend(dc.legend().x(0).y(0));
-};
+}
 
 $(document).ready(function () {
     /* 6 functions below all to create
         a slide toggle and reveal information
         after clicking on a button */
     $('.instruction-button').on('click', function () {
-        $('.jumbotron').slideToggle('slow')
+        $('.jumbotron').slideToggle('slow');
     });
 
     $('#year-button').on('click', function () {
-        $('#year-percentages').slideToggle('slow')
+        $('#year-percentages').slideToggle('slow');
     });
 
     $('#country-button').on('click', function () {
-        $('#country-percentages').slideToggle('slow')
+        $('#country-percentages').slideToggle('slow');
     });
 
     $('#type-button').on('click', function () {
-        $('#type-percentages').slideToggle('slow')
+        $('#type-percentages').slideToggle('slow');
     });
 
     $('#area-button').on('click', function () {
-        $('#area-percentages').slideToggle('slow')
+        $('#area-percentages').slideToggle('slow');
     });
 
     $('#fatal-button').on('click', function () {
-        $('#fatal-percentages').slideToggle('slow')
+        $('#fatal-percentages').slideToggle('slow');
     });
 
 
