@@ -1,8 +1,10 @@
+/* Set font family in body so it applies to everything */
 body {
     background-color: #8fc1e3;
     font-family: 'Cabin', sans-serif;
 }
 
+/* Used rem values where possible so it is responsive on different screen sizes */
 header {
     padding: 2rem;
     background-color: #31708E;
@@ -10,6 +12,7 @@ header {
     margin-bottom: 1rem;
 }
 
+/* Created padding and a margin on the whole section element to create whitespace for a better look */
 section {
     margin: 5rem;
     padding-right: 5rem;
@@ -53,10 +56,12 @@ section {
     padding: 1rem;
 }
 
+/* To provide space on top of each chart so they arent on top of each other */
 .charts {
     margin-top: 3rem;
 }
 
+/* Adding overflow scroll as its the best way to try and make charts 'responsive' on different screen sizes */
 .bar-chart, .pie-chart {
     width: 100%;
     overflow: scroll;
@@ -75,6 +80,8 @@ footer {
     display: block;
 }
 
+/* Added media queries as I wanted elements central on mobiles.
+    Whilst I wanted them inline on opposite sides on biggers screens */
 @media (min-width: 576px){
     #footer-writing {
         float: left;
@@ -104,7 +111,7 @@ footer {
     text-decoration: none;
 }
 
-/* Rotate labels at bottom of bar charts */
+/* Rotate labels at bottom of bar charts so they dont overlap */
 
 #chart-one .x.axis text {
     text-anchor: end !important;
