@@ -292,8 +292,8 @@ function calculateFatalPercentages(data) {
     });
 
     //variables to calculate % of each outcome
-    var outcomeY = (fatalObj.Y / 1868) * 100;
-    var outcomeN = (fatalObj.N / 1868) * 100;
+    var outcomeY = (fatalObj.Fatal / 1868) * 100;
+    var outcomeN = (fatalObj['Not Fatal'] / 1868) * 100;
     var outcomeUnknown = (fatalObj.Unknown / 1868) * 100;
 
     //append %s to html
