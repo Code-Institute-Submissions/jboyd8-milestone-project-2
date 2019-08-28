@@ -67,6 +67,12 @@ section {
     overflow: scroll;
 }
 
+@media (min-width: 1140px){
+    .bar-chart, .pie-chart {
+        overflow: visible
+    }
+}
+
 footer {
     margin: 0;
     margin-top: 3rem;
