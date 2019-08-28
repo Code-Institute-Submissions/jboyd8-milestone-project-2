@@ -29,6 +29,7 @@
 </head>
 
 <body>
+    <!-- Added container fluid so that header fills entire width of page-->
     <header class="container-fluid">
         <div class="row">
             <div class="col-12 text-center" id="heading">
@@ -38,6 +39,7 @@
         </div>
     </header>
 
+    <!-- Just used container for section to utilise white space on the sides for a cleaner look and text-center to keep everything central-->
     <section class="container text-center">
         <div class="row">
             <div class="col-12 text-center">
@@ -58,17 +60,23 @@
                 </div>
             </div>
         </div>
+
+        <!-- Alot of content given IDs so I could target the element specifically in JS-->
+        <!-- Created a new row so the filters are aligned next to eac other by themselves-->
         <div class="row text-center">
             <div class="col-12 col-lg-4" id="year-filter"></div>
             <div class="col-12 col-lg-4" id="type-filter"></div>
             <div class="col-12 col-lg-4" id="fatal-filter"></div>
         </div>
+
+        <!-- New Row created just to house the bar charts-->
         <div class="row">
             <div class="col-12 col-lg-6">
                 <button type="button" class="text-center heading-button" id="year-button">GLOBAL SHARK ATTACKS BY YEAR</button>
                 <div id="year-percentages" class="percentages">
                     <p id="year-paragraph"></p>
                 </div>
+                <!-- Seperate div specifically for the chart-->
                 <div class="bar-chart charts">
                     <div id="chart-one"></div>
                 </div>
@@ -78,18 +86,21 @@
                 <div id="country-percentages" class="percentages">
                     <p id="country-paragraph"></p>
                 </div>
+                <!-- Seperate div specifically for the chart-->
                 <div class="bar-chart charts">
                     <div id="chart-two"></div>
                 </div>
             </div>
         </div>
 
+        <!-- New row to house two of the pie charts-->
         <div class="row">
             <div class="col-12 col-lg-6">
                 <button class="text-center heading-button" id="type-button">GLOBAL SHARK ATTACKS BY TYPE</button>
                 <div id="type-percentages" class="percentages">
                     <p id="type-paragraph"></p>
                 </div>
+                <!-- Seperate div specifically for the chart-->
                 <div class="pie-chart charts">
                     <div id="chart-three"></div>
                 </div>
@@ -99,11 +110,14 @@
                 <div id="area-percentages" class="percentages">
                     <p id="area-paragraph"></p>
                 </div>
+                <!-- Seperate div specifically for the chart-->
                 <div class="pie-chart charts">
                     <div id="chart-four"></div>
                 </div>
             </div>
         </div>
+
+        <!-- New row for the last pie chart-->
         <div class="row">
             <div class="col-lg-3"></div>
             <div class="col-12 col-lg-6">
@@ -111,6 +125,7 @@
                 <div id="fatal-percentages" class="percentages">
                     <p id="fatal-paragraph"></p>
                 </div>
+                <!-- Seperate div specifically for the chart-->
                 <div class="pie-chart charts">
                     <div id="chart-five"></div>
                 </div>
@@ -126,9 +141,11 @@
 
     </section>
 
+    <!-- footer given container-fluid to fill width of page-->
     <footer class="container-fluid" id="footer">
         <div class="row">
             <div class="col-12 text-center">
+                <!-- Used ids for elements below to specifically targte in CSS-->
                 <small id="footer-writing">Dashboard created by Jamie Boyd. Dataset by sharkattackfile.net</small>
                 <button class="btn btn-light" id="reset-button">Reset Charts</button>
                 <button class="btn btn-light" id="btt-button"><a href="#heading">Back to Top</a></button>
