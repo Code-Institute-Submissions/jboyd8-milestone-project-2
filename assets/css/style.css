@@ -67,6 +67,7 @@ section {
     overflow: scroll;
 }
 
+/* Removes the scroll bar on xl screen sizes as its not needed */
 @media (min-width: 1140px){
     .bar-chart, .pie-chart {
         overflow: visible
@@ -121,11 +122,15 @@ footer {
 
 #chart-one .x.axis text {
     text-anchor: end !important;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 #chart-two .x.axis text {
     text-anchor: end !important;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     font-size: 0.5rem;
 }
