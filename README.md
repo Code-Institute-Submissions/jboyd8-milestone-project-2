@@ -5,6 +5,8 @@ This is my second milestone project on the Full Stack Developer course by Code I
 
 I chose to use a dataset based on global shark attacks as this is something that I find interesting. This is purely a front-end project so no manipulation of the data has taken place on the back-end. This is purely a visualisation of data that is already in the file.
 
+My dataset is based upon global shark attacks from 2000 - 2018 on the top 10 affected countries.
+
 [Dashboard Website](https://jboyd8.github.io/milestone-project-2/)
 
 ## UX
@@ -39,6 +41,12 @@ I have shared my wireframes below, however, the final site looks quite different
 #### Current Features
 The current features of this dashboard include multiple interactive charts. By clicking on any value in any of the charts, all other charts
 will filter accordingly.
+Charts include:
+* Shark Attacks by Year
+* Shark Attacks By Country
+* Shark Attacks by Type
+* Shark Attacks by Area
+* Shark Attacks by Outcome (fatal or not)
 
 #### Future Features
 Future features will depends on the data available. I would like to add a chart to show attacks by species. The data in the species column of this
