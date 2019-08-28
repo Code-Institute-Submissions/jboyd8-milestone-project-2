@@ -73,7 +73,9 @@ Additionally to the above, I also provided my GitHub pages link to various peopl
 
 ## Bugs
 ---
-I have added overflow scroll to my charts via CSS. I was unable to find a way to make my charts responsive, so this was the most visually pleasing way I could do it.
+I have added overflow scroll to my charts via CSS. I was unable to find a way to make my charts responsive, so this was the most visually pleasing way I could do it. I will continue to look for a solution to make the charts reposnive to different screen sizes.
+
+
 
 
 ## Deployment
